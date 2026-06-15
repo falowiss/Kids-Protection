@@ -42,57 +42,215 @@
     <script src="https://static.tildacdn.com/js/tilda-zero-scale-1.0.min.js" charset="utf-8" async onerror="this.loaderr='y';"></script>
     <script src="https://static.tildacdn.com/js/tilda-events-1.0.min.js" charset="utf-8" async onerror="this.loaderr='y';"></script>
     <style>
-        /* Адаптив как на оригинальном Tilda-сайте */
+        /* Основные стили для Hero-блока - теперь на флексах, не на absolute */
+        .hero-block {
+            min-height: 100vh;
+            background-color: #ffffff;
+            display: flex;
+            align-items: center;
+            padding: 80px 5% 60px;
+            box-sizing: border-box;
+        }
+        .hero-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+        .hero-left {
+            flex: 1.2;
+            min-width: 280px;
+        }
+        .hero-right {
+            flex: 0.8;
+            min-width: 280px;
+            text-align: center;
+        }
+        .hero-logo {
+            max-width: 280px;
+            width: 100%;
+            margin-bottom: 30px;
+        }
+        .hero-title {
+            font-size: 52px;
+            font-weight: 800;
+            font-family: 'Roboto', Arial, sans-serif;
+            line-height: 1.1;
+            color: #000000;
+            margin: 20px 0;
+        }
+        .hero-subtitle {
+            font-size: 20px;
+            font-family: 'Montserrat', Arial, sans-serif;
+            line-height: 1.4;
+            color: #000000;
+            margin: 20px 0;
+        }
+        .hero-badge {
+            display: inline-block;
+            background-color: #63b4ff;
+            border-radius: 100px;
+            padding: 8px 24px;
+            transform: rotate(355deg);
+            margin: 10px 0;
+        }
+        .hero-badge span {
+            color: #ffffff;
+            font-size: 20px;
+            font-family: 'Montserrat', Arial, sans-serif;
+            font-weight: 400;
+            display: inline-block;
+            transform: rotate(5deg);
+        }
+        .hero-btn {
+            display: inline-block;
+            background-color: #63b4ff;
+            color: #ffffff;
+            font-size: 14px;
+            font-weight: 600;
+            font-family: 'Montserrat', Arial, sans-serif;
+            padding: 15px 35px;
+            border-radius: 30px;
+            text-decoration: none;
+            margin-top: 20px;
+            transition: 0.2s;
+            border: none;
+            cursor: pointer;
+        }
+        .hero-btn:hover {
+            background-color: #4a9ee0;
+            transform: translateY(-2px);
+        }
+        .hero-family-img {
+            width: 100%;
+            max-width: 500px;
+            border-radius: 30px;
+            display: block;
+            margin: 0 auto;
+        }
+        
+        /* Адаптив для Hero */
         @media screen and (max-width: 768px) {
-            .t156__wrapper { flex-wrap: wrap; justify-content: center; gap: 15px; }
-            .t156__item { width: 45%; margin-bottom: 20px; }
-            .t490__container, .t1070__row { flex-direction: column; align-items: center; }
-            .t-card__col, .t1070__col { width: 90%; margin-bottom: 30px; }
-            .t001__title { font-size: 32px !important; padding: 0 20px; }
-            .t396__artboard { height: auto !important; min-height: auto !important; padding-bottom: 50px; }
-            .t396__artboard .tn-elem {
-                position: relative !important;
-                top: auto !important;
-                left: auto !important;
-                margin: 20px auto !important;
-                display: block !important;
-                width: 90% !important;
+            .hero-block {
+                padding: 40px 20px 50px;
+                min-height: auto;
+            }
+            .hero-container {
+                flex-direction: column-reverse;
+                text-align: center;
+            }
+            .hero-left {
+                text-align: center;
+            }
+            .hero-logo {
+                margin: 0 auto 20px;
+                max-width: 240px;
+            }
+            .hero-title {
+                font-size: 32px;
+            }
+            .hero-subtitle {
+                font-size: 16px;
+            }
+            .hero-badge span {
+                font-size: 14px;
+            }
+            .hero-badge {
+                padding: 5px 18px;
+            }
+            .hero-family-img {
+                max-width: 300px;
+            }
+        }
+        
+        @media screen and (max-width: 480px) {
+            .hero-title {
+                font-size: 28px;
+            }
+            .hero-subtitle {
+                font-size: 14px;
+            }
+            .hero-btn {
+                padding: 12px 28px;
+                font-size: 13px;
+            }
+            .hero-family-img {
+                max-width: 250px;
+            }
+        }
+
+        /* Адаптив для остальных блоков */
+        @media screen and (max-width: 768px) {
+            .t156__wrapper { 
+                flex-wrap: wrap; 
+                justify-content: center; 
+                gap: 15px; 
+            }
+            .t156__item { 
+                width: 45%; 
+                margin-bottom: 20px; 
+            }
+            .t490__container { 
+                flex-direction: column; 
+                align-items: center; 
+            }
+            .t-card__col, .t1070__col { 
+                width: 90%; 
+                margin-bottom: 30px; 
+            }
+            .t1070__row {
+                flex-direction: column;
+                align-items: center;
+            }
+            .t001__title { 
+                font-size: 32px !important; 
+                padding: 0 20px; 
+            }
+            .t452__content {
+                flex-direction: column !important;
+                text-align: center;
+            }
+            .t452__col:last-child {
                 text-align: center !important;
             }
-            .t396__artboard .tn-elem[data-elem-id="1765792345353"] {
-                width: 90% !important;
-                max-width: 400px;
-                margin: 20px auto !important;
+            .t-section__title {
+                font-size: 32px !important;
+                padding: 0 20px;
             }
-            .t396__artboard .tn-elem[data-elem-id="1765792345353"] .tn-atom {
-                height: auto !important;
-                min-height: 300px;
+            .t-section__descr {
+                font-size: 16px !important;
+                padding: 0 20px;
             }
-            .t396__artboard .tn-elem[data-elem-id="1765876787306"] {
-                width: 80% !important;
-                max-width: 300px;
-                margin: 20px auto !important;
-            }
-            .t396__artboard .tn-elem[data-elem-id="1765796610536"] {
-                width: 80% !important;
-                max-width: 280px;
-                margin: 20px auto !important;
-            }
-            .t396__artboard .tn-elem[data-elem-id="1765796224508000003"],
-            .t396__artboard .tn-elem[data-elem-id="1765796224508000002"] {
-                position: relative !important;
-                transform: none !important;
-                margin: 10px auto !important;
-            }
-            .t396__artboard .tn-elem[data-elem-id="1765796224508000002"] {
-                width: 150px !important;
+            .t392__title {
+                font-size: 32px !important;
             }
         }
+        
         @media screen and (max-width: 480px) {
-            .t156__item { width: 100%; }
-            .t490__img { width: 100px !important; height: 100px !important; }
-            .t1070__bgimg { width: 80px !important; height: 80px !important; }
+            .t156__item { 
+                width: 80%; 
+            }
+            .t490__img { 
+                width: 80px !important; 
+                height: 80px !important; 
+            }
+            .t-card__title {
+                font-size: 18px !important;
+            }
+            .t-card__descr {
+                font-size: 13px !important;
+            }
+            .t1070__bgimg {
+                width: 70px !important;
+                height: 70px !important;
+            }
         }
+        
+        /* Стили для футера */
         .t452__copyright p {
             color: #ffffff !important;
             opacity: 1 !important;
@@ -118,49 +276,35 @@
         .t452_scrolltop svg {
             fill: white;
         }
+        
+        /* Cookie уведомления фиксированные внизу */
+        .t886, .t657 {
+            position: fixed;
+            bottom: 20px;
+            z-index: 10000;
+        }
     </style>
 </head>
 <body class="t-body" style="margin:0;">
 <div id="allrecords" class="t-records" data-hook="blocks-collection-content-node" data-tilda-project-id="19186026" data-tilda-page-id="102826716" data-tilda-formskey="2e4d72b9c70d2603c976f3fa19186026" data-tilda-cookie="no" data-tilda-lazy="yes" data-tilda-root-zone="com" data-tilda-project-country="RU">
 
-    <!-- REC 1674980401 - Hero блок с лого и картинкой семьи -->
-    <div id="rec1674980401" class="r t-rec" style=" " data-animationappear="off" data-record-type="396">
-        <style>#rec1674980401 .t396__artboard {min-height:692px;height:100vh;background-color:#ffffff;}#rec1674980401 .t396__filter {min-height:692px;height:100vh;background-color:rgba(0,0,0,0);}#rec1674980401 .t396__carrier{min-height:692px;height:100vh;background-position:center center;background-attachment:scroll;background-size:cover;background-repeat:no-repeat;}@media screen and (max-width:1199px) {#rec1674980401 .t396__artboard,#rec1674980401 .t396__filter,#rec1674980401 .t396__carrier {min-height:692px;}#rec1674980401 .t396__filter {}#rec1674980401 .t396__carrier {background-attachment:scroll;}}@media screen and (max-width:959px) {#rec1674980401 .t396__artboard,#rec1674980401 .t396__filter,#rec1674980401 .t396__carrier {min-height:692px;}#rec1674980401 .t396__filter {}#rec1674980401 .t396__carrier {background-attachment:scroll;}}@media screen and (max-width:639px) {#rec1674980401 .t396__artboard,#rec1674980401 .t396__filter,#rec1674980401 .t396__carrier {min-height:692px;}#rec1674980401 .t396__filter {}#rec1674980401 .t396__carrier {background-attachment:scroll;}}@media screen and (max-width:479px) {#rec1674980401 .t396__artboard,#rec1674980401 .t396__filter,#rec1674980401 .t396__carrier {min-height:704px;}#rec1674980401 .t396__filter {}#rec1674980401 .t396__carrier {background-attachment:scroll;}}#rec1674980401 .tn-elem[data-elem-id="1765792345353"]{z-index:3;top:calc(50vh - 346px + 20px);;left:calc(50% - 600px + 592px);;width:588px;height:612px;}#rec1674980401 .tn-elem[data-elem-id="1765792345353"] .tn-atom{border-radius:30px 30px 30px 30px;background-position:center center;background-size:cover;background-repeat:no-repeat;border-width:var(--t396-borderwidth,0);border-style:var(--t396-borderstyle,solid);border-color:var(--t396-bordercolor,transparent);transition:background-color var(--t396-speedhover,0s) ease-in-out,color var(--t396-speedhover,0s) ease-in-out,border-color var(--t396-speedhover,0s) ease-in-out,box-shadow var(--t396-shadowshoverspeed,0.2s) ease-in-out;}@media screen and (max-width:1199px){#rec1674980401 .tn-elem[data-elem-id="1765792345353"]{display:table;}}@media screen and (max-width:959px){#rec1674980401 .tn-elem[data-elem-id="1765792345353"]{display:table;}}@media screen and (max-width:639px){#rec1674980401 .tn-elem[data-elem-id="1765792345353"]{display:table;}}@media screen and (max-width:479px){#rec1674980401 .tn-elem[data-elem-id="1765792345353"]{display:table;top:123px;;left:calc(50% - 160px + 10px);;width:300px;height:312px;}}#rec1674980401 .tn-elem[data-elem-id="1765792550240"]{color:#000000;text-align:center;z-index:3;top:calc(50vh - 346px + 156px);;left:calc(50% - 600px + 80px);;width:427px;height:auto;}#rec1674980401 .tn-elem[data-elem-id="1765792550240"] .tn-atom{vertical-align:middle;color:#000000;font-size:52px;font-family:'Roboto',Arial,sans-serif;line-height:1;font-weight:800;background-position:center center;border-width:var(--t396-borderwidth,0);border-style:var(--t396-borderstyle,solid);border-color:var(--t396-bordercolor,transparent);transition:background-color var(--t396-speedhover,0s) ease-in-out,color var(--t396-speedhover,0s) ease-in-out,border-color var(--t396-speedhover,0s) ease-in-out,box-shadow var(--t396-shadowshoverspeed,0.2s) ease-in-out;text-shadow:var(--t396-shadow-text-x,0px) var(--t396-shadow-text-y,0px) var(--t396-shadow-text-blur,0px) rgba(var(--t396-shadow-text-color),var(--t396-shadow-text-opacity,100%));}@media screen and (max-width:1199px){#rec1674980401 .tn-elem[data-elem-id="1765792550240"]{display:table;height:auto;}}@media screen and (max-width:959px){#rec1674980401 .tn-elem[data-elem-id="1765792550240"]{display:table;height:auto;}}@media screen and (max-width:639px){#rec1674980401 .tn-elem[data-elem-id="1765792550240"]{display:table;height:auto;}}@media screen and (max-width:479px){#rec1674980401 .tn-elem[data-elem-id="1765792550240"]{display:table;top:459px;;left:calc(50% - 160px + 10px);;width:298px;height:48px;}#rec1674980401 .tn-elem[data-elem-id="1765792550240"] .tn-atom{vertical-align:middle;white-space:normal;font-size:24px;background-size:cover;}}#rec1674980401 .tn-elem[data-elem-id="1765792828961"]{color:#000000;text-align:center;z-index:3;top:calc(50vh - 346px + 344px);;left:calc(50% - 600px + 137px);;width:313px;height:auto;}#rec1674980401 .tn-elem[data-elem-id="1765792828961"] .tn-atom{vertical-align:middle;color:#000000;font-size:20px;font-family:'Montserrat',Arial,sans-serif;line-height:1;font-weight:400;background-position:center center;border-width:var(--t396-borderwidth,0);border-style:var(--t396-borderstyle,solid);border-color:var(--t396-bordercolor,transparent);transition:background-color var(--t396-speedhover,0s) ease-in-out,color var(--t396-speedhover,0s) ease-in-out,border-color var(--t396-speedhover,0s) ease-in-out,box-shadow var(--t396-shadowshoverspeed,0.2s) ease-in-out;text-shadow:var(--t396-shadow-text-x,0px) var(--t396-shadow-text-y,0px) var(--t396-shadow-text-blur,0px) rgba(var(--t396-shadow-text-color),var(--t396-shadow-text-opacity,100%));}@media screen and (max-width:1199px){#rec1674980401 .tn-elem[data-elem-id="1765792828961"]{display:table;height:auto;}}@media screen and (max-width:959px){#rec1674980401 .tn-elem[data-elem-id="1765792828961"]{display:table;height:auto;}}@media screen and (max-width:639px){#rec1674980401 .tn-elem[data-elem-id="1765792828961"]{display:table;height:auto;}}@media screen and (max-width:479px){#rec1674980401 .tn-elem[data-elem-id="1765792828961"]{display:table;top:523px;;left:calc(50% - 160px + 14px);;width:291px;height:auto;}#rec1674980401 .tn-elem[data-elem-id="1765792828961"] .tn-atom{font-size:16px;background-size:cover;}}#rec1674980401 .tn-elem[data-elem-id="1765796224508000002"]{z-index:3;top:calc(50vh - 346px + 290px);;left:calc(50% - 600px + 380px);;width:192px;height:43px;}#rec1674980401 .tn-elem[data-elem-id="1765796224508000002"] .tn-atom{border-radius:100px 100px 100px 100px;background-color:#63b4ff;background-position:center center;border-width:var(--t396-borderwidth,0);border-style:var(--t396-borderstyle,solid);border-color:var(--t396-bordercolor,transparent);transition:background-color var(--t396-speedhover,0s) ease-in-out,color var(--t396-speedhover,0s) ease-in-out,border-color var(--t396-speedhover,0s) ease-in-out,box-shadow var(--t396-shadowshoverspeed,0.2s) ease-in-out;-webkit-transform:rotate(355deg);-moz-transform:rotate(355deg);transform:rotate(355deg);}@media screen and (max-width:1199px){#rec1674980401 .tn-elem[data-elem-id="1765796224508000002"]{display:table;}}@media screen and (max-width:959px){#rec1674980401 .tn-elem[data-elem-id="1765796224508000002"]{display:table;}}@media screen and (max-width:639px){#rec1674980401 .tn-elem[data-elem-id="1765796224508000002"]{display:table;}}@media screen and (max-width:479px){#rec1674980401 .tn-elem[data-elem-id="1765796224508000002"]{display:table;top:423px;;left:calc(50% - 160px + 187px);;width:118px;height:27px;}}#rec1674980401 .tn-elem[data-elem-id="1765796224508000003"]{color:#ffffff;z-index:3;top:calc(50vh - 346px + 296px);;left:calc(50% - 600px + 400px);;width:156px;height:auto;}#rec1674980401 .tn-elem[data-elem-id="1765796224508000003"] .tn-atom{vertical-align:middle;color:#ffffff;font-size:20px;font-family:'Montserrat',Arial,sans-serif;line-height:1.55;font-weight:400;background-position:center center;border-width:var(--t396-borderwidth,0);border-style:var(--t396-borderstyle,solid);border-color:var(--t396-bordercolor,transparent);transition:background-color var(--t396-speedhover,0s) ease-in-out,color var(--t396-speedhover,0s) ease-in-out,border-color var(--t396-speedhover,0s) ease-in-out,box-shadow var(--t396-shadowshoverspeed,0.2s) ease-in-out;text-shadow:var(--t396-shadow-text-x,0px) var(--t396-shadow-text-y,0px) var(--t396-shadow-text-blur,0px) rgba(var(--t396-shadow-text-color),var(--t396-shadow-text-opacity,100%));-webkit-transform:rotate(355deg);-moz-transform:rotate(355deg);transform:rotate(355deg);}@media screen and (max-width:1199px){#rec1674980401 .tn-elem[data-elem-id="1765796224508000003"]{display:table;height:auto;}}@media screen and (max-width:959px){#rec1674980401 .tn-elem[data-elem-id="1765796224508000003"]{display:table;height:auto;}}@media screen and (max-width:639px){#rec1674980401 .tn-elem[data-elem-id="1765796224508000003"]{display:table;height:auto;}}@media screen and (max-width:479px){#rec1674980401 .tn-elem[data-elem-id="1765796224508000003"]{display:table;top:427px;;left:calc(50% - 160px + 199px);;width:96px;height:auto;}#rec1674980401 .tn-elem[data-elem-id="1765796224508000003"] .tn-atom{font-size:12px;background-size:cover;}}#rec1674980401 .tn-elem[data-elem-id="1765796610536"]{color:#ffffff;text-align:center;z-index:3;top:calc(50vh - 346px + 508px);;left:calc(50% - 600px + 191px);;width:200px;height:55px;}#rec1674980401 .tn-elem[data-elem-id="1765796610536"] .tn-atom{color:#ffffff;font-size:14px;font-family:'Montserrat',Arial,sans-serif;line-height:1.55;font-weight:600;border-radius:30px 30px 30px 30px;background-position:center center;--t396-speedhover:0.2s;transition:background-color var(--t396-speedhover,0s) ease-in-out,color var(--t396-speedhover,0s) ease-in-out,border-color var(--t396-speedhover,0s) ease-in-out,box-shadow var(--t396-shadowshoverspeed,0.2s) ease-in-out;--t396-bgcolor-color:#63b4ff;--t396-bgcolor-image:none;background-color:var(--t396-bgcolor-color,transparent);-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;}#rec1674980401 .tn-elem[data-elem-id="1765796610536"] .tn-atom::after{display:none;}#rec1674980401 .tn-elem[data-elem-id="1765796610536"] .tn-atom .tn-atom__button-content{column-gap:10px;padding:0px 0px 0px 0px;}#rec1674980401 .tn-elem[data-elem-id="1765796610536"] .tn-atom .tn-atom__button-text{transition:color var(--t396-speedhover,0s) ease-in-out;color:#ffffff;}#rec1674980401 .tn-elem[data-elem-id="1765796610536"] .tn-atom .tn-atom__button-border::before{display:none;}#rec1674980401 .tn-elem[data-elem-id="1765796610536"] .tn-atom .tn-atom__button-border::after{display:none;}#rec1674980401 .tn-elem[data-elem-id="1765876787306"]{z-index:3;top:calc(50vh - 346px + 56px);;left:calc(50% - 600px + 138px);;width:350px;height:auto;}#rec1674980401 .tn-elem[data-elem-id="1765876787306"] .tn-atom{border-radius:0px 0px 0px 0px;background-position:center center;border-width:var(--t396-borderwidth,0);border-style:var(--t396-borderstyle,solid);border-color:var(--t396-bordercolor,transparent);transition:background-color var(--t396-speedhover,0s) ease-in-out,color var(--t396-speedhover,0s) ease-in-out,border-color var(--t396-speedhover,0s) ease-in-out,box-shadow var(--t396-shadowshoverspeed,0.2s) ease-in-out;}#rec1674980401 .tn-elem[data-elem-id="1765876787306"] .tn-atom__img{border-radius:0px 0px 0px 0px;object-position:center center;}@media screen and (max-width:1199px){#rec1674980401 .tn-elem[data-elem-id="1765876787306"]{display:table;height:auto;}}@media screen and (max-width:959px){#rec1674980401 .tn-elem[data-elem-id="1765876787306"]{display:table;height:auto;}}@media screen and (max-width:639px){#rec1674980401 .tn-elem[data-elem-id="1765876787306"]{display:table;height:auto;}}@media screen and (max-width:479px){#rec1674980401 .tn-elem[data-elem-id="1765876787306"]{display:table;top:30px;;left:calc(50% - 160px + 10px);;width:334px;height:auto;}}</style>
-        <div class='t396'>
-            <div class="t396__artboard" data-artboard-recid="1674980401" data-artboard-screens="320,480,640,960,1200" data-artboard-height="692" data-artboard-valign="center" data-artboard-height_vh="100" data-artboard-upscale="grid" data-artboard-height-res-320="704" data-artboard-height-res-480="692" data-artboard-height-res-640="692" data-artboard-height-res-960="692">
-                <div class="t396__carrier" data-artboard-recid="1674980401"></div>
-                <div class="t396__filter" data-artboard-recid="1674980401"></div>
-                <div class='t396__elem tn-elem tn-elem__16749804011765792345353' data-elem-id='1765792345353' data-elem-type='shape' data-field-top-value="20" data-field-left-value="592" data-field-height-value="612" data-field-width-value="588" data-field-axisy-value="top" data-field-axisx-value="left" data-field-container-value="grid" data-field-topunits-value="px" data-field-leftunits-value="px" data-field-heightunits-value="px" data-field-widthunits-value="px" data-field-widthmode-value="fixed" data-field-heightmode-value="fixed" data-field-top-res-320-value="123" data-field-left-res-320-value="10" data-field-height-res-320-value="312" data-field-width-res-320-value="300" data-field-widthmode-res-320-value="fixed">
-                    <div class='tn-atom t-bgimg' data-original="images/photo.png.webp" aria-label='' role="img"></div>
+    <!-- HERO БЛОК - полностью переделан на флексы для идеальной адаптивности -->
+    <div class="hero-block">
+        <div class="hero-container">
+            <div class="hero-left">
+                <img src="images/9uoj.png.webp" alt="Kids Protection" class="hero-logo">
+                <div class="hero-title">Безопасность ребёнка в одном приложении</div>
+                <div class="hero-subtitle">Отслеживайте местоположение, активность и безопасность смартфона ребёнка в реальном времени</div>
+                <div class="hero-badge">
+                    <span>Kids Protection</span>
                 </div>
-                <div class='t396__elem tn-elem tn-elem__16749804011765792550240' data-elem-id='1765792550240' data-elem-type='text' data-field-top-value="156" data-field-left-value="80" data-field-height-value="156" data-field-width-value="427" data-field-axisy-value="top" data-field-axisx-value="left" data-field-container-value="grid" data-field-topunits-value="px" data-field-leftunits-value="px" data-field-heightunits-value="px" data-field-widthunits-value="px" data-field-textfit-value="autoheight" data-field-fontsize-value="52" data-field-top-res-320-value="459" data-field-left-res-320-value="10" data-field-height-res-320-value="48" data-field-width-res-320-value="298" data-field-textfit-res-320-value="fixedsize" data-field-fontsize-res-320-value="24">
-                    <div class='tn-atom' field='tn_text_1765792550240'>Безопасность ребёнка в&nbsp;одном приложении</div>
-                </div>
-                <div class='t396__elem tn-elem tn-elem__16749804011765792828961' data-elem-id='1765792828961' data-elem-type='text' data-field-top-value="344" data-field-left-value="137" data-field-height-value="100" data-field-width-value="313" data-field-axisy-value="top" data-field-axisx-value="left" data-field-container-value="grid" data-field-topunits-value="px" data-field-leftunits-value="px" data-field-heightunits-value="px" data-field-widthunits-value="px" data-field-textfit-value="autoheight" data-field-fontsize-value="20" data-field-top-res-320-value="523" data-field-left-res-320-value="14" data-field-width-res-320-value="291" data-field-fontsize-res-320-value="16">
-                    <div class='tn-atom' field='tn_text_1765792828961'>Отслеживайте местоположение, активность и безопасность смартфона ребёнка в реальном времени</div>
-                </div>
-                <div class='t396__elem tn-elem tn-elem__16749804011765796224508000002 t-animate' data-elem-id='1765796224508000002' data-elem-type='shape' data-field-top-value="290" data-field-left-value="380" data-field-height-value="43" data-field-width-value="192" data-field-axisy-value="top" data-field-axisx-value="left" data-field-container-value="grid" data-field-topunits-value="px" data-field-leftunits-value="px" data-field-heightunits-value="px" data-field-widthunits-value="px" data-animate-style="fadeindown" data-animate-duration="1.3" data-animate-distance="100" data-field-top-res-320-value="423" data-field-left-res-320-value="187" data-field-height-res-320-value="27" data-field-width-res-320-value="118">
-                    <div class='tn-atom'></div>
-                </div>
-                <div class='t396__elem tn-elem tn-elem__16749804011765796224508000003 t-animate' data-elem-id='1765796224508000003' data-elem-type='text' data-field-top-value="296" data-field-left-value="400" data-field-height-value="31" data-field-width-value="156" data-field-axisy-value="top" data-field-axisx-value="left" data-field-container-value="grid" data-field-topunits-value="px" data-field-leftunits-value="px" data-field-heightunits-value="px" data-field-widthunits-value="px" data-animate-style="fadeindown" data-animate-duration="1.3" data-animate-distance="100" data-field-textfit-value="autoheight" data-field-fontsize-value="20" data-field-top-res-320-value="427" data-field-left-res-320-value="199" data-field-width-res-320-value="96" data-field-fontsize-res-320-value="12">
-                    <div class='tn-atom' field='tn_text_1765796224508000003'>Kids Protection</div>
-                </div>
-                <div class='t396__elem tn-elem tn-elem__16749804011765796610536' data-elem-id='1765796610536' data-elem-type='button' data-field-top-value="508" data-field-left-value="191" data-field-height-value="55" data-field-width-value="200" data-field-axisy-value="top" data-field-axisx-value="left" data-field-container-value="grid" data-field-topunits-value="px" data-field-leftunits-value="px" data-field-heightunits-value="px" data-field-widthunits-value="px" data-field-textfit-value="fixedsize" data-field-fontsize-value="14" data-field-top-res-320-value="619" data-field-left-res-320-value="60">
-                    <a class='tn-atom' href="#890">
-                        <div class='tn-atom__button-content'>
-                            <span class="tn-atom__button-text">УЗНАТЬ БОЛЬШЕ</span>
-                        </div>
-                        <span class="tn-atom__button-border"></span>
-                    </a>
-                </div>
-                <div class='t396__elem tn-elem tn-elem__16749804011765876787306' data-elem-id='1765876787306' data-elem-type='image' data-field-top-value="56" data-field-left-value="138" data-field-height-value="87" data-field-width-value="350" data-field-axisy-value="top" data-field-axisx-value="left" data-field-container-value="grid" data-field-topunits-value="px" data-field-leftunits-value="px" data-field-heightunits-value="px" data-field-widthunits-value="px" data-field-filewidth-value="1680" data-field-fileheight-value="417" data-field-heightmode-value="hug" data-field-top-res-320-value="30" data-field-left-res-320-value="10" data-field-height-res-320-value="83" data-field-width-res-320-value="334">
-                    <div class='tn-atom'>
-                        <img class='tn-atom__img t-img' data-original='images/9uoj.png.webp' src='images/9uoj.png.webp' alt='' imgfield='tn_img_1765876787306'/>
-                    </div>
-                </div>
+                <br>
+                <a href="#890" class="hero-btn">УЗНАТЬ БОЛЬШЕ</a>
+            </div>
+            <div class="hero-right">
+                <img src="images/photo.png.webp" alt="Семья" class="hero-family-img">
             </div>
         </div>
-        <script>t_onReady(function() {t_onFuncLoad('t396_init',function() {t396_init('1674980401');});});</script>
     </div>
 
     <!-- REC 1694346671 - 4 телефона в порядке 4,3,2,1 -->
@@ -207,7 +351,7 @@
                 </div>
             </div>
         </div>
-        <style>#rec1674980441 .t001__title{font-size:52px;}</style>
+        <style>#rec1674980441 .t001__title{font-size:52px;} @media screen and (max-width:768px){#rec1674980441 .t001__title{font-size:28px !important;}}</style>
     </div>
 
     <!-- REC 1674980471 - 6 преимуществ с картинками -->
@@ -227,7 +371,7 @@
                     </div>
                 </div>
                 <div class="t-card__col t-card__col_withoutbtn t490__col t-col t-col_4 t-align_center t-item">
-                    <img class="t490__img t-img" src="images/56.jpeg.webp" data-original="images/56.jpeg.webp" alt="" style="width:120px; height:120px; object-fit:contain; margin-bottom:20px; border-radius:50%;">
+                    <img class="t490__img t-img" src="images/__56.jpeg.webp" data-original="images/__56.jpeg.webp" alt="" style="width:120px; height:120px; object-fit:contain; margin-bottom:20px; border-radius:50%;">
                     <div class="t490__wrappercenter">
                         <div class="t-card__title t-name t-name_xl" field="li_title__1476968700508"><strong>Установление ограничений</strong></div>
                         <div class="t-card__descr t-descr t-descr_xs" field="li_descr__1476968700508">Возможность ограничить доступ к&nbsp;определенным приложениям или установить лимит времени их&nbsp;использования</div>
@@ -334,8 +478,8 @@
 
     <!-- REC 1741326241 - Cookie уведомление -->
     <div id="rec1741326241" class="r t-rec" style=" " data-animationappear="off" data-record-type="886">
-        <div class="t886 t886_closed" data-storage-item="t886cookiename_19186026" style="right:20px;">
-            <div class="t886__wrapper" style="background-color:#ebebeb; width:600px;">
+        <div class="t886 t886_closed" data-storage-item="t886cookiename_19186026" style="right:20px; bottom:20px; position:fixed; z-index:10000;">
+            <div class="t886__wrapper" style="background-color:#ebebeb; width:600px; max-width:90vw;">
                 <div class="t886__text t-text t-text_xs t-valign_middle" field="text">Сайт использует файлы cookie. Cookie запоминают ваши действия и предпочтения для лучшего взаимодействия в интернете.</div>
                 <div class="t-btn t-btnflex t-btnflex_type_button t-btnflex_sm t886__btn" type="button"><span class="t-btnflex__text">OK</span></div>
             </div>
@@ -345,8 +489,8 @@
 
     <!-- REC 1741422211 - GDPR уведомление -->
     <div id="rec1741422211" class="r t-rec" style=" " data-animationappear="off" data-record-type="657">
-        <div class="t657 t657_rectangle t657_closed" data-storage-item="t657cookiename_19186026" style="">
-            <div class="t657__wrapper t-align_center" role="alertdialog" aria-modal="false" style="background:#ffffff;">
+        <div class="t657 t657_rectangle t657_closed" data-storage-item="t657cookiename_19186026" style="position:fixed; bottom:20px; left:20px; z-index:10000;">
+            <div class="t657__wrapper t-align_center" role="alertdialog" aria-modal="false" style="background:#ffffff; max-width:90vw;">
                 <div class="t657__text t-name t-descr_xxs" field="text"><strong>Уважаемые посетители, наш сайт собирает персональные данные.</strong><br /><a href="/privacy" target="_blank" rel="noreferrer noopener" style="box-shadow: none; text-decoration: none; border-bottom-style: solid; border-bottom-color: rgb(99, 180, 255);">Ознакомьтесь с Политикой&nbsp;в отношении&nbsp;обработки&nbsp;персональных&nbsp;данных.</a></div>
                 <div class="t-btn t-btnflex t-btnflex_type_button t-btnflex_xs t657__btn" type="button"><span class="t-btnflex__text">Я принимаю</span></div>
                 <button type="button" class="t657__close-button t657__icon-close" aria-label="Закрыть уведомление">
