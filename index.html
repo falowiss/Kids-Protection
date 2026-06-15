@@ -42,22 +42,57 @@
     <script src="https://static.tildacdn.com/js/tilda-zero-scale-1.0.min.js" charset="utf-8" async onerror="this.loaderr='y';"></script>
     <script src="https://static.tildacdn.com/js/tilda-events-1.0.min.js" charset="utf-8" async onerror="this.loaderr='y';"></script>
     <style>
+        /* Адаптив как на оригинальном Tilda-сайте */
         @media screen and (max-width: 768px) {
-            .t156__wrapper { flex-wrap: wrap; justify-content: center; }
+            .t156__wrapper { flex-wrap: wrap; justify-content: center; gap: 15px; }
             .t156__item { width: 45%; margin-bottom: 20px; }
-            .t490__container { flex-direction: column; align-items: center; }
-            .t-card__col { width: 90%; margin-bottom: 30px; }
-            .t1070__row { flex-direction: column; align-items: center; }
-            .t1070__col { width: 90%; margin-bottom: 30px; }
+            .t490__container, .t1070__row { flex-direction: column; align-items: center; }
+            .t-card__col, .t1070__col { width: 90%; margin-bottom: 30px; }
             .t001__title { font-size: 32px !important; padding: 0 20px; }
             .t396__artboard { height: auto !important; min-height: auto !important; padding-bottom: 50px; }
+            .t396__artboard .tn-elem {
+                position: relative !important;
+                top: auto !important;
+                left: auto !important;
+                margin: 20px auto !important;
+                display: block !important;
+                width: 90% !important;
+                text-align: center !important;
+            }
+            .t396__artboard .tn-elem[data-elem-id="1765792345353"] {
+                width: 90% !important;
+                max-width: 400px;
+                margin: 20px auto !important;
+            }
+            .t396__artboard .tn-elem[data-elem-id="1765792345353"] .tn-atom {
+                height: auto !important;
+                min-height: 300px;
+            }
+            .t396__artboard .tn-elem[data-elem-id="1765876787306"] {
+                width: 80% !important;
+                max-width: 300px;
+                margin: 20px auto !important;
+            }
+            .t396__artboard .tn-elem[data-elem-id="1765796610536"] {
+                width: 80% !important;
+                max-width: 280px;
+                margin: 20px auto !important;
+            }
+            .t396__artboard .tn-elem[data-elem-id="1765796224508000003"],
+            .t396__artboard .tn-elem[data-elem-id="1765796224508000002"] {
+                position: relative !important;
+                transform: none !important;
+                margin: 10px auto !important;
+            }
+            .t396__artboard .tn-elem[data-elem-id="1765796224508000002"] {
+                width: 150px !important;
+            }
         }
         @media screen and (max-width: 480px) {
             .t156__item { width: 100%; }
             .t490__img { width: 100px !important; height: 100px !important; }
             .t1070__bgimg { width: 80px !important; height: 80px !important; }
         }
-        /* ДОПОЛНИТЕЛЬНЫЕ СТИЛИ ДЛЯ ЧЁТКОГО ФУТЕРА И КНОПКИ ВВЕРХ */
         .t452__copyright p {
             color: #ffffff !important;
             opacity: 1 !important;
@@ -341,7 +376,7 @@
         </div>
     </div>
 
-    <!-- REC 1705965681 - Footer (ИСПРАВЛЕН — ЧЁТКИЙ ТЕКСТ И ЯРКАЯ КНОПКА ВВЕРХ) -->
+    <!-- REC 1705965681 - Footer -->
     <div id="rec1705965681" class="r t-rec t-rec_pt_0 t-rec_pb_75" style="padding-top:0px;padding-bottom:75px;background-color:#171717;" data-animationappear="off" data-record-type="452" data-bg-color="#171717">
         <div class="t452" id="t-footer_1705965681">
             <div class="t452__maincontainer" style="height: auto; padding: 40px 0;">
