@@ -39,7 +39,7 @@
             position: relative;
         }
         
-        /* 1. ЛОГОТИП - ЕЩЁ БОЛЬШЕ */
+        /* 1. ЛОГОТИП - БОЛЬШОЙ */
         .hero-logo {
             width: 580px;
             max-width: 92%;
@@ -50,12 +50,12 @@
             height: auto;
         }
         
-        /* 2. КАРТИНКА СЕМЬИ */
+        /* 2. КАРТИНКА СЕМЬИ - С БОЛЬШИМ ОТСТУПОМ СНИЗУ */
         .hero-family {
             width: 588px;
             max-width: 92%;
             position: relative;
-            margin-bottom: 5px;
+            margin-bottom: 20px;
         }
         .hero-family img {
             width: 100%;
@@ -63,16 +63,16 @@
             display: block;
         }
         
-        /* 3. БЕЙДЖ KIDS PROTECTION - ПО ЦЕНТРУ ОВАЛА, НИЖЕ И ЛЕВЕЕ */
+        /* 3. БЕЙДЖ - ОВАЛ ПОД НАКЛОНОМ, ТЕКСТ РОВНЫЙ ПО ЦЕНТРУ */
         .hero-badge-wrapper {
             position: relative;
             width: 100%;
             max-width: 588px;
-            margin-top: -50px;
-            margin-bottom: 0;
+            margin-top: -55px;
+            margin-bottom: 10px;
             display: flex;
-            justify-content: flex-start;
-            padding-left: 10%;
+            justify-content: flex-end;
+            padding-right: 20%;
         }
         .hero-badge {
             display: inline-block;
@@ -88,7 +88,6 @@
             font-family: 'Montserrat', sans-serif;
             font-weight: 400;
             display: inline-block;
-            transform: rotate(355deg);
         }
         
         /* 4. ЗАГОЛОВОК */
@@ -99,7 +98,7 @@
             line-height: 1.1;
             color: #000;
             text-align: center;
-            margin-top: 30px;
+            margin-top: 25px;
             margin-bottom: 20px;
             padding: 0 20px;
         }
@@ -352,56 +351,6 @@
             cursor: pointer;
         }
         
-        /* ====== GDPR - КАК В ОРИГИНАЛЕ ====== */
-        .gdpr-notice {
-            position: fixed;
-            bottom: 20px;
-            left: 50%;
-            transform: translateX(-50%);
-            background: #ffffff;
-            padding: 20px 30px;
-            border-radius: 5px;
-            max-width: 700px;
-            width: 90%;
-            z-index: 10000;
-            font-size: 13px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.15);
-            text-align: center;
-        }
-        .gdpr-notice strong {
-            font-weight: 600;
-            display: block;
-            margin-bottom: 5px;
-        }
-        .gdpr-notice a {
-            color: #63b4ff;
-            text-decoration: none;
-            border-bottom: 1px solid #63b4ff;
-        }
-        .gdpr-notice button {
-            background: #63b4ff;
-            color: #fff;
-            border: none;
-            padding: 8px 30px;
-            border-radius: 30px;
-            margin-top: 12px;
-            cursor: pointer;
-            text-transform: uppercase;
-            font-size: 12px;
-            font-weight: 600;
-            letter-spacing: 0.5px;
-        }
-        .gdpr-close {
-            position: absolute;
-            top: 8px;
-            right: 12px;
-            background: none;
-            border: none;
-            cursor: pointer;
-            font-size: 16px;
-            color: #999;
-        }
-        
         /* ====== МОБИЛЬНАЯ ВЕРСИЯ ====== */
         @media screen and (max-width: 768px) {
             .hero-block {
@@ -417,12 +366,13 @@
             
             .hero-family {
                 max-width: 400px;
-                margin-bottom: 0;
+                margin-bottom: 15px;
             }
             
             .hero-badge-wrapper {
                 margin-top: -45px;
-                padding-left: 8%;
+                padding-right: 15%;
+                margin-bottom: 5px;
             }
             .hero-badge {
                 padding: 6px 20px;
@@ -433,7 +383,7 @@
             
             .hero-title {
                 font-size: 30px;
-                margin-top: 30px;
+                margin-top: 25px;
                 margin-bottom: 15px;
                 padding: 0 10px;
             }
@@ -539,11 +489,6 @@
                 max-width: 90vw;
                 padding: 12px 15px;
             }
-            .gdpr-notice {
-                max-width: 95vw;
-                padding: 15px 20px;
-                bottom: 10px;
-            }
         }
         
         @media screen and (max-width: 480px) {
@@ -552,10 +497,11 @@
             }
             .hero-family {
                 max-width: 320px;
+                margin-bottom: 12px;
             }
             .hero-badge-wrapper {
                 margin-top: -38px;
-                padding-left: 5%;
+                padding-right: 12%;
             }
             .hero-badge {
                 padding: 4px 14px;
@@ -565,7 +511,7 @@
             }
             .hero-title {
                 font-size: 26px;
-                margin-top: 25px;
+                margin-top: 20px;
             }
             .hero-subtitle {
                 font-size: 14px;
@@ -591,17 +537,17 @@
 
 <!-- ====== HERO БЛОК ====== -->
 <div class="hero-block">
-    <!-- 1. ЛОГОТИП - БОЛЬШОЙ -->
+    <!-- 1. ЛОГОТИП -->
     <div class="hero-logo">
         <img src="images/9uoj.png.webp" alt="KIDS PROTECTION">
     </div>
     
-    <!-- 2. КАРТИНКА СЕМЬИ -->
+    <!-- 2. КАРТИНКА СЕМЬИ - С БОЛЬШИМ ОТСТУПОМ -->
     <div class="hero-family">
         <img src="images/photo.png.webp" alt="Семья">
     </div>
     
-    <!-- 3. БЕЙДЖ - ПО ЦЕНТРУ ОВАЛА, НИЖЕ И ЛЕВЕЕ -->
+    <!-- 3. БЕЙДЖ - ОВАЛ ПОД НАКЛОНОМ, ТЕКСТ РОВНЫЙ ПО ЦЕНТРУ -->
     <div class="hero-badge-wrapper">
         <div class="hero-badge">
             <span>Kids Protection</span>
@@ -614,11 +560,11 @@
     <!-- 5. ПОДЗАГОЛОВОК -->
     <p class="hero-subtitle">Отслеживайте местоположение, активность и безопасность смартфона ребёнка в реальном времени</p>
     
-    <!-- 6. КНОПКА - БОЛЬШЕ -->
+    <!-- 6. КНОПКА -->
     <a href="#tariffs" class="hero-btn">УЗНАТЬ БОЛЬШЕ</a>
 </div>
 
-<!-- ====== ТЕЛЕФОНЫ - 4 ШТУКИ В ОДИН РЯД ====== -->
+<!-- ====== ТЕЛЕФОНЫ ====== -->
 <div class="phones-block">
     <div class="phones-wrapper">
         <div class="phone-item"><img src="images/iphone-4.png.webp" alt=""></div>
@@ -628,7 +574,7 @@
     </div>
 </div>
 
-<!-- ====== СИНИЙ БЛОК - ВЕСЬ ТЕКСТ ЖИРНЫЙ ====== -->
+<!-- ====== СИНИЙ БЛОК ====== -->
 <div class="blue-quote">
     <p>Мы создали инструмент, который работает незаметно, уважает личное пространство и даёт главное — спокойствие за тех, кого вы любите.</p>
 </div>
@@ -700,12 +646,12 @@
     </div>
 </div>
 
-<!-- ====== NOROOT ЛОГО ====== -->
+<!-- ====== NOROOT ====== -->
 <div class="noroot">
     <img src="images/noroot.png.webp" alt="">
 </div>
 
-<!-- ====== СКАЧАТЬ ПРИЛОЖЕНИЕ ====== -->
+<!-- ====== СКАЧАТЬ ====== -->
 <div class="download">
     <h2>Скачать приложение</h2>
     <p>Временно пока только на RuStore</p>
@@ -736,19 +682,10 @@
     </div>
 </div>
 
-<!-- ====== COOKIE УВЕДОМЛЕНИЕ ====== -->
+<!-- ====== COOKIE ====== -->
 <div class="cookie-notice" id="cookieNotice">
     Сайт использует файлы cookie. Cookie запоминают ваши действия и предпочтения для лучшего взаимодействия в интернете.<br>
     <button onclick="document.getElementById('cookieNotice').style.display='none';">OK</button>
-</div>
-
-<!-- ====== GDPR УВЕДОМЛЕНИЕ - КАК В ОРИГИНАЛЕ ====== -->
-<div class="gdpr-notice" id="gdprNotice">
-    <button class="gdpr-close" onclick="document.getElementById('gdprNotice').style.display='none';">✕</button>
-    <strong>Уважаемые посетители, наш сайт собирает персональные данные.</strong>
-    <a href="/privacy" target="_blank">Ознакомьтесь с Политикой в отношении обработки персональных данных.</a>
-    <br>
-    <button onclick="document.getElementById('gdprNotice').style.display='none';">Я принимаю</button>
 </div>
 
 </body>
