@@ -12,564 +12,750 @@
     <meta property="og:image" content="images/9uoj.png.webp" />
     <link rel="canonical" href="http://kidsprotection.ru">
     <meta name="format-detection" content="telephone=no" />
-    <meta http-equiv="x-dns-prefetch-control" content="on">
-    <link rel="dns-prefetch" href="https://ws.tildacdn.com">
-    <link rel="dns-prefetch" href="https://static.tildacdn.com">
     <link rel="shortcut icon" href="https://static.tildacdn.com/img/tildafavicon.ico" type="image/x-icon" />
-    <script src="https://neo.tildacdn.com/js/tilda-fallback-1.0.min.js" async charset="utf-8"></script>
-    <link rel="stylesheet" href="https://static.tildacdn.com/css/tilda-grid-3.0.min.css" type="text/css" media="all" onerror="this.loaderr='y';"/>
-    <link rel="stylesheet" href="https://static.tildacdn.com/ws/project19186026/tilda-blocks-page102826716.min.css?t=1768990939" type="text/css" media="all" onerror="this.loaderr='y';" />
+    <link rel="stylesheet" href="https://static.tildacdn.com/css/tilda-grid-3.0.min.css" type="text/css" media="all" />
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;800&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&subset=latin,cyrillic" rel="stylesheet">
-    <link rel="stylesheet" href="https://static.tildacdn.com/css/tilda-animation-2.0.min.css" type="text/css" media="all" onerror="this.loaderr='y';" />
-    <link rel="stylesheet" href="https://static.tildacdn.com/css/tilda-slds-1.4.min.css" type="text/css" media="print" onload="this.media='all';" onerror="this.loaderr='y';" />
-    <noscript><link rel="stylesheet" href="https://static.tildacdn.com/css/tilda-slds-1.4.min.css" type="text/css" media="all" /></noscript>
-    <link rel="stylesheet" href="https://static.tildacdn.com/css/tilda-cover-1.0.min.css" type="text/css" media="all" onerror="this.loaderr='y';" />
-    <link rel="stylesheet" href="https://static.tildacdn.com/css/tilda-cards-1.0.min.css" type="text/css" media="all" onerror="this.loaderr='y';" />
-    <link rel="stylesheet" href="https://static.tildacdn.com/css/tilda-zoom-2.0.min.css" type="text/css" media="print" onload="this.media='all';" onerror="this.loaderr='y';" />
-    <noscript><link rel="stylesheet" href="https://static.tildacdn.com/css/tilda-zoom-2.0.min.css" type="text/css" media="all" /></noscript>
-    <script nomodule src="https://static.tildacdn.com/js/tilda-polyfill-1.0.min.js" charset="utf-8"></script>
-    <script src="https://static.tildacdn.com/js/tilda-scripts-3.0.min.js" charset="utf-8" defer onerror="this.loaderr='y';"></script>
-    <script src="https://static.tildacdn.com/ws/project19186026/tilda-blocks-page102826716.min.js?t=1768990939" charset="utf-8" async onerror="this.loaderr='y';"></script>
-    <script src="https://static.tildacdn.com/js/tilda-lazyload-1.0.min.js" charset="utf-8" async onerror="this.loaderr='y';"></script>
-    <script src="https://static.tildacdn.com/js/tilda-animation-2.0.min.js" charset="utf-8" async onerror="this.loaderr='y';"></script>
-    <script src="https://static.tildacdn.com/js/tilda-zero-1.1.min.js" charset="utf-8" async onerror="this.loaderr='y';"></script>
-    <script src="https://static.tildacdn.com/js/tilda-slds-1.4.min.js" charset="utf-8" async onerror="this.loaderr='y';"></script>
-    <script src="https://static.tildacdn.com/js/hammer.min.js" charset="utf-8" async onerror="this.loaderr='y';"></script>
-    <script src="https://static.tildacdn.com/js/tilda-cover-1.0.min.js" charset="utf-8" async onerror="this.loaderr='y';"></script>
-    <script src="https://static.tildacdn.com/js/tilda-cards-1.0.min.js" charset="utf-8" async onerror="this.loaderr='y';"></script>
-    <script src="https://static.tildacdn.com/js/tilda-zoom-2.0.min.js" charset="utf-8" async onerror="this.loaderr='y';"></script>
-    <script src="https://static.tildacdn.com/js/tilda-zero-scale-1.0.min.js" charset="utf-8" async onerror="this.loaderr='y';"></script>
-    <script src="https://static.tildacdn.com/js/tilda-events-1.0.min.js" charset="utf-8" async onerror="this.loaderr='y';"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;800&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <style>
-        /* ====== ПОЛНАЯ КОПИЯ ОРИГИНАЛА ДЛЯ ТЕЛЕФОНА ====== */
+        /* БАЗОВЫЕ СТИЛИ - КАК В ОРИГИНАЛЕ TILDA */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Montserrat', Arial, sans-serif;
+            background: #fff;
+            overflow-x: hidden;
+        }
+        .t-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        .t-align_center {
+            text-align: center;
+        }
+        
+        /* ====== HERO БЛОК - КАК В ОРИГИНАЛЕ ====== */
+        .hero-block {
+            background: #fff;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 30px 20px 40px;
+            position: relative;
+        }
+        
+        /* 1. ЛОГОТИП (9uoj.png.webp) - САМЫЙ ВЕРХ ПО ЦЕНТРУ */
+        .hero-logo {
+            width: 350px;
+            max-width: 80%;
+            margin-bottom: 20px;
+        }
+        .hero-logo img {
+            width: 100%;
+            height: auto;
+        }
+        
+        /* 2. КАРТИНКА СЕМЬИ (photo.png.webp) - ПОД ЛОГОТИПОМ */
+        .hero-family {
+            width: 588px;
+            max-width: 90%;
+            position: relative;
+            margin-bottom: 10px;
+        }
+        .hero-family img {
+            width: 100%;
+            border-radius: 30px;
+            display: block;
+        }
+        
+        /* 3. БЕЙДЖ KIDS PROTECTION - НАЕЗЖАЕТ НА КАРТИНКУ СПРАВА СНИЗУ */
+        .hero-badge {
+            position: relative;
+            top: -50px;
+            right: -10px;
+            align-self: flex-end;
+            background: #63b4ff;
+            border-radius: 100px;
+            padding: 6px 22px;
+            transform: rotate(355deg);
+            display: inline-block;
+            margin-right: 5%;
+        }
+        .hero-badge span {
+            color: #fff;
+            font-size: 18px;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 400;
+            display: inline-block;
+            transform: rotate(5deg);
+        }
+        
+        /* 4. ЗАГОЛОВОК */
+        .hero-title {
+            font-family: 'Roboto', sans-serif;
+            font-size: 48px;
+            font-weight: 800;
+            line-height: 1.1;
+            color: #000;
+            text-align: center;
+            margin: -20px 0 15px;
+            padding: 0 20px;
+        }
+        
+        /* 5. ПОДЗАГОЛОВОК */
+        .hero-subtitle {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 18px;
+            font-weight: 400;
+            line-height: 1.3;
+            color: #000;
+            text-align: center;
+            max-width: 500px;
+            margin: 0 auto 25px;
+            padding: 0 20px;
+        }
+        
+        /* 6. КНОПКА */
+        .hero-btn {
+            display: inline-block;
+            background: #63b4ff;
+            color: #fff;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 14px;
+            font-weight: 600;
+            padding: 14px 40px;
+            border-radius: 30px;
+            text-decoration: none;
+            margin-bottom: 30px;
+        }
+        
+        /* ====== ТЕЛЕФОНЫ - 4 ШТУКИ В ОДИН РЯД ====== */
+        .phones-block {
+            padding: 20px 20px 60px;
+        }
+        .phones-wrapper {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: nowrap;
+        }
+        .phone-item {
+            flex: 0 0 auto;
+            width: 22%;
+            max-width: 150px;
+            min-width: 80px;
+        }
+        .phone-item img {
+            width: 100%;
+            height: auto;
+        }
+        
+        /* ====== СИНИЙ БЛОК С ЦИТАТОЙ ====== */
+        .blue-quote {
+            background: #63b4ff;
+            min-height: 75vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 40px 20px;
+            text-align: center;
+        }
+        .blue-quote p {
+            font-family: 'Roboto', sans-serif;
+            font-size: 48px;
+            font-weight: 400;
+            line-height: 1.3;
+            color: #fff;
+            max-width: 900px;
+        }
+        .blue-quote strong {
+            font-weight: 700;
+        }
+        
+        /* ====== ПРЕИМУЩЕСТВА ====== */
+        .advantages {
+            padding: 100px 20px 120px;
+        }
+        .section-title {
+            font-family: 'Roboto', sans-serif;
+            font-size: 42px;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        .advantages-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .advantage-item {
+            text-align: center;
+        }
+        .advantage-item img {
+            width: 120px;
+            height: 120px;
+            object-fit: contain;
+            margin-bottom: 20px;
+            border-radius: 50%;
+        }
+        .advantage-item h3 {
+            font-family: 'Roboto', sans-serif;
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+        .advantage-item p {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 14px;
+            color: #666;
+            line-height: 1.4;
+        }
+        
+        /* ====== ТАРИФЫ ====== */
+        .tariffs {
+            padding: 80px 20px 100px;
+        }
+        .tariffs-subtitle {
+            text-align: center;
+            max-width: 560px;
+            margin: 0 auto 50px;
+            font-size: 16px;
+            line-height: 1.6;
+            color: #666;
+        }
+        .tariffs-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .tariff-item {
+            border: 1px solid #e0e6ed;
+            border-radius: 9px;
+            padding: 35px 20px;
+            text-align: center;
+        }
+        .tariff-item img {
+            width: 100px;
+            height: 100px;
+            object-fit: contain;
+            margin-bottom: 20px;
+            border-radius: 50%;
+        }
+        .tariff-item h3 {
+            font-family: 'Roboto', sans-serif;
+            font-size: 22px;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+        .tariff-item p {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 20px;
+        }
+        .tariff-price {
+            font-size: 24px;
+            font-weight: 700;
+            color: #63b4ff;
+        }
+        
+        /* ====== NOROOT ЛОГО ====== */
+        .noroot {
+            background: #fafafa;
+            padding: 80px 20px 40px;
+            text-align: center;
+        }
+        .noroot img {
+            max-width: 300px;
+            width: 100%;
+        }
+        
+        /* ====== СКАЧАТЬ ПРИЛОЖЕНИЕ ====== */
+        .download {
+            background: #fafafa;
+            padding: 40px 20px 100px;
+            text-align: center;
+        }
+        .download h2 {
+            font-family: 'Roboto', sans-serif;
+            font-size: 36px;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+        .download p {
+            font-size: 16px;
+            color: #666;
+            margin-bottom: 30px;
+        }
+        .download img {
+            max-width: 220px;
+            width: 100%;
+        }
+        
+        /* ====== ФУТЕР ====== */
+        .footer {
+            background: #171717;
+            padding: 40px 20px 60px;
+        }
+        .footer-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 30px;
+        }
+        .footer-col {
+            flex: 1;
+            min-width: 250px;
+        }
+        .footer-col p {
+            color: #fff;
+            font-size: 13px;
+            line-height: 1.6;
+            margin-bottom: 8px;
+        }
+        .footer-right {
+            text-align: right;
+        }
+        .footer-right a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 13px;
+        }
+        .footer-right a:hover {
+            text-decoration: underline;
+        }
+        
+        /* ====== COOKIE УВЕДОМЛЕНИЕ ====== */
+        .cookie-notice {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #ebebeb;
+            padding: 15px 20px;
+            border-radius: 5px;
+            max-width: 500px;
+            z-index: 10000;
+            font-size: 13px;
+            box-shadow: 0 0 5px rgba(0,0,0,0.1);
+        }
+        .cookie-notice button {
+            background: #fff;
+            border: 1px solid #999;
+            color: #555;
+            padding: 5px 18px;
+            border-radius: 5px;
+            margin-top: 10px;
+            cursor: pointer;
+        }
+        
+        /* ====== GDPR УВЕДОМЛЕНИЕ ====== */
+        .gdpr-notice {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            background: #fff;
+            padding: 15px 20px;
+            border-radius: 5px;
+            max-width: 500px;
+            z-index: 10000;
+            font-size: 13px;
+            box-shadow: 0 0 5px rgba(0,0,0,0.1);
+        }
+        .gdpr-notice a {
+            color: #63b4ff;
+            text-decoration: none;
+            border-bottom: 1px solid #63b4ff;
+        }
+        .gdpr-notice button {
+            background: #63b4ff;
+            color: #fff;
+            border: none;
+            padding: 5px 20px;
+            border-radius: 30px;
+            margin-top: 10px;
+            cursor: pointer;
+            text-transform: uppercase;
+            font-size: 11px;
+        }
+        .gdpr-close {
+            position: absolute;
+            top: 8px;
+            right: 10px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 14px;
+            color: #999;
+        }
+        
+        /* ====== МОБИЛЬНАЯ ВЕРСИЯ (ТОЧНО КАК В ОРИГИНАЛЕ) ====== */
         @media screen and (max-width: 768px) {
-            /* Герой блок - меняем порядок */
-            #rec1674980401 .t396__artboard {
-                min-height: auto !important;
-                height: auto !important;
-                padding-bottom: 30px !important;
-                display: flex !important;
-                flex-direction: column !important;
-                align-items: center !important;
+            /* Герой блок - все по центру */
+            .hero-block {
+                padding: 20px 15px 30px;
+                min-height: auto;
             }
             
-            /* 1. ЛОГОТИП 9uoj.png.webp - САМЫЙ ВЕРХ */
-            #rec1674980401 .tn-elem[data-elem-id="1765876787306"] {
-                position: relative !important;
-                top: 0 !important;
-                left: auto !important;
-                width: 280px !important;
-                margin: 20px auto 0 !important;
-                order: 1 !important;
+            /* Логотип */
+            .hero-logo {
+                width: 280px;
+                margin-bottom: 15px;
             }
             
-            /* 2. КАРТИНКА СЕМЬИ photo.png.webp - ПОД ЛОГОТИПОМ */
-            #rec1674980401 .tn-elem[data-elem-id="1765792345353"] {
-                position: relative !important;
-                top: 0 !important;
-                left: auto !important;
-                width: 300px !important;
-                height: 300px !important;
-                margin: 10px auto 0 !important;
-                order: 2 !important;
-            }
-            #rec1674980401 .tn-elem[data-elem-id="1765792345353"] .tn-atom {
-                height: 300px !important;
-                background-size: contain !important;
-                background-position: center !important;
+            /* Картинка семьи - больше */
+            .hero-family {
+                width: 100%;
+                max-width: 400px;
+                margin-bottom: 0;
             }
             
-            /* 3. KIDS PROTECTION БЕЙДЖ - НАЕЗЖАЕТ НА КАРТИНКУ СПРАВА СНИЗУ */
-            #rec1674980401 .tn-elem[data-elem-id="1765796224508000002"] {
-                position: relative !important;
-                top: -70px !important;
-                left: auto !important;
-                width: 118px !important;
-                height: 27px !important;
-                margin: 0 0 0 auto !important;
-                transform: rotate(355deg) !important;
-                order: 3 !important;
-                flex-shrink: 0 !important;
+            /* Бейдж - наезжает на картинку справа снизу */
+            .hero-badge {
+                position: relative;
+                top: -45px;
+                right: -10px;
+                align-self: flex-end;
+                padding: 5px 18px;
+                margin-right: 0;
             }
-            #rec1674980401 .tn-elem[data-elem-id="1765796224508000003"] {
-                position: relative !important;
-                top: -97px !important;
-                left: auto !important;
-                right: 10px !important;
-                width: auto !important;
-                margin: 0 15px 0 auto !important;
-                text-align: center !important;
-                transform: rotate(355deg) !important;
-                order: 3 !important;
-            }
-            #rec1674980401 .tn-elem[data-elem-id="1765796224508000003"] .tn-atom {
-                font-size: 12px !important;
+            .hero-badge span {
+                font-size: 14px;
             }
             
-            /* 4. ЗАГОЛОВОК - ПОД КАРТИНКОЙ */
-            #rec1674980401 .tn-elem[data-elem-id="1765792550240"] {
-                position: relative !important;
-                top: -50px !important;
-                left: auto !important;
-                width: 90% !important;
-                margin: 0 auto !important;
-                text-align: center !important;
-                order: 4 !important;
-            }
-            #rec1674980401 .tn-elem[data-elem-id="1765792550240"] .tn-atom {
-                font-size: 28px !important;
-                font-weight: 800 !important;
+            /* Заголовок - под бейджем с отступом */
+            .hero-title {
+                font-size: 28px;
+                margin-top: -30px;
+                margin-bottom: 10px;
+                padding: 0 10px;
             }
             
-            /* 5. ПОДЗАГОЛОВОК */
-            #rec1674980401 .tn-elem[data-elem-id="1765792828961"] {
-                position: relative !important;
-                top: -50px !important;
-                left: auto !important;
-                width: 90% !important;
-                margin: 0 auto !important;
-                text-align: center !important;
-                order: 5 !important;
-            }
-            #rec1674980401 .tn-elem[data-elem-id="1765792828961"] .tn-atom {
-                font-size: 16px !important;
+            /* Подзаголовок */
+            .hero-subtitle {
+                font-size: 15px;
+                padding: 0 10px;
+                margin-bottom: 20px;
             }
             
-            /* 6. КНОПКА */
-            #rec1674980401 .tn-elem[data-elem-id="1765796610536"] {
-                position: relative !important;
-                top: -50px !important;
-                left: auto !important;
-                width: 200px !important;
-                margin: 0 auto !important;
-                order: 6 !important;
+            /* Кнопка */
+            .hero-btn {
+                padding: 12px 35px;
+                font-size: 13px;
+                margin-bottom: 20px;
             }
             
-            /* ====== ТЕЛЕФОНЫ - В ОДИН РЯД, БЕЗ СКРОЛЛА ====== */
-            .t156__wrapper {
-                display: flex !important;
-                flex-wrap: wrap !important;
-                justify-content: center !important;
-                gap: 8px !important;
-                overflow: visible !important;
+            /* Телефоны - в один ряд */
+            .phones-wrapper {
+                gap: 10px;
+                flex-wrap: nowrap;
+                overflow: visible;
             }
-            .t156__item {
-                flex: 0 0 auto !important;
-                width: 22% !important;
-                min-width: 65px !important;
-                max-width: 100px !important;
+            .phone-item {
+                width: 22%;
+                min-width: 65px;
+                max-width: 100px;
             }
-            
-            /* ====== ПРЕИМУЩЕСТВА - В 1 КОЛОНКУ ====== */
-            .t490__container {
-                flex-direction: column !important;
-                align-items: center !important;
-            }
-            .t-card__col {
-                width: 100% !important;
-                max-width: 400px !important;
-                margin-bottom: 40px !important;
-            }
-            .t490__img {
-                width: 100px !important;
-                height: 100px !important;
+            .phones-block {
+                padding: 10px 15px 40px;
             }
             
-            /* ====== ТАРИФЫ - В 1 КОЛОНКУ ====== */
-            .t1070__row {
-                flex-direction: column !important;
-                align-items: center !important;
+            /* Синий блок */
+            .blue-quote {
+                min-height: 50vh;
+                padding: 30px 20px;
             }
-            .t1070__col {
-                width: 100% !important;
-                max-width: 400px !important;
-                margin-bottom: 30px !important;
+            .blue-quote p {
+                font-size: 26px;
             }
             
-            /* ====== СИНИЙ БЛОК ====== */
-            .t001__title {
-                font-size: 28px !important;
-                padding: 0 20px !important;
+            /* Преимущества - в 1 колонку */
+            .advantages {
+                padding: 60px 15px 80px;
+            }
+            .section-title {
+                font-size: 32px;
+                margin-bottom: 40px;
+            }
+            .advantages-grid {
+                grid-template-columns: 1fr;
+                gap: 35px;
+            }
+            .advantage-item img {
+                width: 90px;
+                height: 90px;
+            }
+            .advantage-item h3 {
+                font-size: 18px;
             }
             
-            /* ====== ФУТЕР ====== */
-            .t452__content {
-                flex-direction: column !important;
-                text-align: center !important;
+            /* Тарифы - в 1 колонку */
+            .tariffs {
+                padding: 50px 15px 70px;
             }
-            .t452__col:last-child {
-                text-align: center !important;
+            .tariffs-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            .tariffs-subtitle {
+                font-size: 14px;
+                margin-bottom: 30px;
+            }
+            .tariff-item img {
+                width: 80px;
+                height: 80px;
+            }
+            .tariff-item h3 {
+                font-size: 19px;
+            }
+            
+            /* Noroot лого */
+            .noroot {
+                padding: 50px 20px 30px;
+            }
+            .noroot img {
+                max-width: 220px;
+            }
+            
+            /* Скачать приложение */
+            .download {
+                padding: 30px 20px 60px;
+            }
+            .download h2 {
+                font-size: 28px;
+            }
+            .download img {
+                max-width: 180px;
+            }
+            
+            /* Футер */
+            .footer {
+                padding: 30px 20px 40px;
+            }
+            .footer-inner {
+                flex-direction: column;
+                text-align: center;
+                gap: 20px;
+            }
+            .footer-right {
+                text-align: center;
+            }
+            
+            /* Cookie и GDPR */
+            .cookie-notice {
+                right: 10px;
+                max-width: 90vw;
+                padding: 12px 15px;
+            }
+            .gdpr-notice {
+                left: 10px;
+                max-width: 90vw;
+                padding: 12px 15px;
             }
         }
         
         @media screen and (max-width: 480px) {
-            .t156__item {
-                width: 22% !important;
-                min-width: 55px !important;
-                max-width: 80px !important;
+            .hero-logo {
+                width: 220px;
             }
-            #rec1674980401 .tn-elem[data-elem-id="1765792345353"] {
-                width: 250px !important;
-                height: 250px !important;
+            .hero-family {
+                max-width: 320px;
             }
-            #rec1674980401 .tn-elem[data-elem-id="1765792345353"] .tn-atom {
-                height: 250px !important;
+            .hero-badge {
+                top: -38px;
+                padding: 4px 14px;
             }
-            #rec1674980401 .tn-elem[data-elem-id="1765796224508000002"] {
-                top: -60px !important;
-                width: 100px !important;
-                height: 24px !important;
+            .hero-badge span {
+                font-size: 12px;
             }
-            #rec1674980401 .tn-elem[data-elem-id="1765796224508000003"] {
-                top: -84px !important;
-                right: 5px !important;
+            .hero-title {
+                font-size: 24px;
+                margin-top: -25px;
             }
-            #rec1674980401 .tn-elem[data-elem-id="1765796224508000003"] .tn-atom {
-                font-size: 10px !important;
+            .hero-subtitle {
+                font-size: 14px;
             }
-        }
-
-        /* ====== СТИЛИ ДЛЯ ФУТЕРА И КНОПКИ ВВЕРХ ====== */
-        .t452__copyright p {
-            color: #ffffff !important;
-            opacity: 1 !important;
-            font-size: 14px;
-            line-height: 1.5;
-        }
-        
-        /* КНОПКА ВВЕРХ - БЕЗ СИНЕГО КРУГА, КАК В ОРИГИНАЛЕ */
-        .t452_scrolltop {
-            color: #ffffff !important;
-            background: none !important;
-            padding: 0 !important;
-            border-radius: 0 !important;
-            display: inline-flex !important;
-            align-items: center !important;
-            gap: 5px !important;
-            text-decoration: none !important;
-            font-weight: 400 !important;
-            transition: 0.2s !important;
-            font-size: 14px !important;
-            font-family: 'Montserrat', Arial, sans-serif !important;
-        }
-        .t452_scrolltop:hover {
-            text-decoration: underline !important;
-            background: none !important;
-            transform: none !important;
-        }
-        .t452_scrolltop svg {
-            display: none !important;
+            .phone-item {
+                min-width: 55px;
+                max-width: 80px;
+            }
+            .phones-wrapper {
+                gap: 6px;
+            }
+            .blue-quote p {
+                font-size: 22px;
+            }
         }
     </style>
 </head>
-<body class="t-body" style="margin:0;">
-<div id="allrecords" class="t-records" data-hook="blocks-collection-content-node" data-tilda-project-id="19186026" data-tilda-page-id="102826716" data-tilda-formskey="2e4d72b9c70d2603c976f3fa19186026" data-tilda-cookie="no" data-tilda-lazy="yes" data-tilda-root-zone="com" data-tilda-project-country="RU">
+<body>
 
-    <!-- REC 1674980401 - Hero блок -->
-    <div id="rec1674980401" class="r t-rec" style=" " data-animationappear="off" data-record-type="396">
-        <style>#rec1674980401 .t396__artboard {min-height:692px;height:100vh;background-color:#ffffff;}#rec1674980401 .t396__filter {min-height:692px;height:100vh;background-color:rgba(0,0,0,0);}#rec1674980401 .t396__carrier{min-height:692px;height:100vh;background-position:center center;background-attachment:scroll;background-size:cover;background-repeat:no-repeat;}@media screen and (max-width:1199px) {#rec1674980401 .t396__artboard,#rec1674980401 .t396__filter,#rec1674980401 .t396__carrier {min-height:692px;}#rec1674980401 .t396__filter {}#rec1674980401 .t396__carrier {background-attachment:scroll;}}@media screen and (max-width:959px) {#rec1674980401 .t396__artboard,#rec1674980401 .t396__filter,#rec1674980401 .t396__carrier {min-height:692px;}#rec1674980401 .t396__filter {}#rec1674980401 .t396__carrier {background-attachment:scroll;}}@media screen and (max-width:639px) {#rec1674980401 .t396__artboard,#rec1674980401 .t396__filter,#rec1674980401 .t396__carrier {min-height:692px;}#rec1674980401 .t396__filter {}#rec1674980401 .t396__carrier {background-attachment:scroll;}}@media screen and (max-width:479px) {#rec1674980401 .t396__artboard,#rec1674980401 .t396__filter,#rec1674980401 .t396__carrier {min-height:704px;}#rec1674980401 .t396__filter {}#rec1674980401 .t396__carrier {background-attachment:scroll;}}#rec1674980401 .tn-elem[data-elem-id="1765792345353"]{z-index:3;top:calc(50vh - 346px + 20px);;left:calc(50% - 600px + 592px);;width:588px;height:612px;}#rec1674980401 .tn-elem[data-elem-id="1765792345353"] .tn-atom{border-radius:30px 30px 30px 30px;background-position:center center;background-size:cover;background-repeat:no-repeat;border-width:var(--t396-borderwidth,0);border-style:var(--t396-borderstyle,solid);border-color:var(--t396-bordercolor,transparent);transition:background-color var(--t396-speedhover,0s) ease-in-out,color var(--t396-speedhover,0s) ease-in-out,border-color var(--t396-speedhover,0s) ease-in-out,box-shadow var(--t396-shadowshoverspeed,0.2s) ease-in-out;}@media screen and (max-width:1199px){#rec1674980401 .tn-elem[data-elem-id="1765792345353"]{display:table;}}@media screen and (max-width:959px){#rec1674980401 .tn-elem[data-elem-id="1765792345353"]{display:table;}}@media screen and (max-width:639px){#rec1674980401 .tn-elem[data-elem-id="1765792345353"]{display:table;}}@media screen and (max-width:479px){#rec1674980401 .tn-elem[data-elem-id="1765792345353"]{display:table;top:123px;;left:calc(50% - 160px + 10px);;width:300px;height:312px;}}#rec1674980401 .tn-elem[data-elem-id="1765792550240"]{color:#000000;text-align:center;z-index:3;top:calc(50vh - 346px + 156px);;left:calc(50% - 600px + 80px);;width:427px;height:auto;}#rec1674980401 .tn-elem[data-elem-id="1765792550240"] .tn-atom{vertical-align:middle;color:#000000;font-size:52px;font-family:'Roboto',Arial,sans-serif;line-height:1;font-weight:800;background-position:center center;border-width:var(--t396-borderwidth,0);border-style:var(--t396-borderstyle,solid);border-color:var(--t396-bordercolor,transparent);transition:background-color var(--t396-speedhover,0s) ease-in-out,color var(--t396-speedhover,0s) ease-in-out,border-color var(--t396-speedhover,0s) ease-in-out,box-shadow var(--t396-shadowshoverspeed,0.2s) ease-in-out;text-shadow:var(--t396-shadow-text-x,0px) var(--t396-shadow-text-y,0px) var(--t396-shadow-text-blur,0px) rgba(var(--t396-shadow-text-color),var(--t396-shadow-text-opacity,100%));}@media screen and (max-width:1199px){#rec1674980401 .tn-elem[data-elem-id="1765792550240"]{display:table;height:auto;}}@media screen and (max-width:959px){#rec1674980401 .tn-elem[data-elem-id="1765792550240"]{display:table;height:auto;}}@media screen and (max-width:639px){#rec1674980401 .tn-elem[data-elem-id="1765792550240"]{display:table;height:auto;}}@media screen and (max-width:479px){#rec1674980401 .tn-elem[data-elem-id="1765792550240"]{display:table;top:459px;;left:calc(50% - 160px + 10px);;width:298px;height:48px;}#rec1674980401 .tn-elem[data-elem-id="1765792550240"] .tn-atom{vertical-align:middle;white-space:normal;font-size:24px;background-size:cover;}}#rec1674980401 .tn-elem[data-elem-id="1765792828961"]{color:#000000;text-align:center;z-index:3;top:calc(50vh - 346px + 344px);;left:calc(50% - 600px + 137px);;width:313px;height:auto;}#rec1674980401 .tn-elem[data-elem-id="1765792828961"] .tn-atom{vertical-align:middle;color:#000000;font-size:20px;font-family:'Montserrat',Arial,sans-serif;line-height:1;font-weight:400;background-position:center center;border-width:var(--t396-borderwidth,0);border-style:var(--t396-borderstyle,solid);border-color:var(--t396-bordercolor,transparent);transition:background-color var(--t396-speedhover,0s) ease-in-out,color var(--t396-speedhover,0s) ease-in-out,border-color var(--t396-speedhover,0s) ease-in-out,box-shadow var(--t396-shadowshoverspeed,0.2s) ease-in-out;text-shadow:var(--t396-shadow-text-x,0px) var(--t396-shadow-text-y,0px) var(--t396-shadow-text-blur,0px) rgba(var(--t396-shadow-text-color),var(--t396-shadow-text-opacity,100%));}@media screen and (max-width:1199px){#rec1674980401 .tn-elem[data-elem-id="1765792828961"]{display:table;height:auto;}}@media screen and (max-width:959px){#rec1674980401 .tn-elem[data-elem-id="1765792828961"]{display:table;height:auto;}}@media screen and (max-width:639px){#rec1674980401 .tn-elem[data-elem-id="1765792828961"]{display:table;height:auto;}}@media screen and (max-width:479px){#rec1674980401 .tn-elem[data-elem-id="1765792828961"]{display:table;top:523px;;left:calc(50% - 160px + 14px);;width:291px;height:auto;}#rec1674980401 .tn-elem[data-elem-id="1765792828961"] .tn-atom{font-size:16px;background-size:cover;}}#rec1674980401 .tn-elem[data-elem-id="1765796224508000002"]{z-index:3;top:calc(50vh - 346px + 290px);;left:calc(50% - 600px + 380px);;width:192px;height:43px;}#rec1674980401 .tn-elem[data-elem-id="1765796224508000002"] .tn-atom{border-radius:100px 100px 100px 100px;background-color:#63b4ff;background-position:center center;border-width:var(--t396-borderwidth,0);border-style:var(--t396-borderstyle,solid);border-color:var(--t396-bordercolor,transparent);transition:background-color var(--t396-speedhover,0s) ease-in-out,color var(--t396-speedhover,0s) ease-in-out,border-color var(--t396-speedhover,0s) ease-in-out,box-shadow var(--t396-shadowshoverspeed,0.2s) ease-in-out;-webkit-transform:rotate(355deg);-moz-transform:rotate(355deg);transform:rotate(355deg);}@media screen and (max-width:1199px){#rec1674980401 .tn-elem[data-elem-id="1765796224508000002"]{display:table;}}@media screen and (max-width:959px){#rec1674980401 .tn-elem[data-elem-id="1765796224508000002"]{display:table;}}@media screen and (max-width:639px){#rec1674980401 .tn-elem[data-elem-id="1765796224508000002"]{display:table;}}@media screen and (max-width:479px){#rec1674980401 .tn-elem[data-elem-id="1765796224508000002"]{display:table;top:423px;;left:calc(50% - 160px + 187px);;width:118px;height:27px;}}#rec1674980401 .tn-elem[data-elem-id="1765796224508000003"]{color:#ffffff;z-index:3;top:calc(50vh - 346px + 296px);;left:calc(50% - 600px + 400px);;width:156px;height:auto;}#rec1674980401 .tn-elem[data-elem-id="1765796224508000003"] .tn-atom{vertical-align:middle;color:#ffffff;font-size:20px;font-family:'Montserrat',Arial,sans-serif;line-height:1.55;font-weight:400;background-position:center center;border-width:var(--t396-borderwidth,0);border-style:var(--t396-borderstyle,solid);border-color:var(--t396-bordercolor,transparent);transition:background-color var(--t396-speedhover,0s) ease-in-out,color var(--t396-speedhover,0s) ease-in-out,border-color var(--t396-speedhover,0s) ease-in-out,box-shadow var(--t396-shadowshoverspeed,0.2s) ease-in-out;text-shadow:var(--t396-shadow-text-x,0px) var(--t396-shadow-text-y,0px) var(--t396-shadow-text-blur,0px) rgba(var(--t396-shadow-text-color),var(--t396-shadow-text-opacity,100%));-webkit-transform:rotate(355deg);-moz-transform:rotate(355deg);transform:rotate(355deg);}@media screen and (max-width:1199px){#rec1674980401 .tn-elem[data-elem-id="1765796224508000003"]{display:table;height:auto;}}@media screen and (max-width:959px){#rec1674980401 .tn-elem[data-elem-id="1765796224508000003"]{display:table;height:auto;}}@media screen and (max-width:639px){#rec1674980401 .tn-elem[data-elem-id="1765796224508000003"]{display:table;height:auto;}}@media screen and (max-width:479px){#rec1674980401 .tn-elem[data-elem-id="1765796224508000003"]{display:table;top:427px;;left:calc(50% - 160px + 199px);;width:96px;height:auto;}#rec1674980401 .tn-elem[data-elem-id="1765796224508000003"] .tn-atom{font-size:12px;background-size:cover;}}#rec1674980401 .tn-elem[data-elem-id="1765796610536"]{color:#ffffff;text-align:center;z-index:3;top:calc(50vh - 346px + 508px);;left:calc(50% - 600px + 191px);;width:200px;height:55px;}#rec1674980401 .tn-elem[data-elem-id="1765796610536"] .tn-atom{color:#ffffff;font-size:14px;font-family:'Montserrat',Arial,sans-serif;line-height:1.55;font-weight:600;border-radius:30px 30px 30px 30px;background-position:center center;--t396-speedhover:0.2s;transition:background-color var(--t396-speedhover,0s) ease-in-out,color var(--t396-speedhover,0s) ease-in-out,border-color var(--t396-speedhover,0s) ease-in-out,box-shadow var(--t396-shadowshoverspeed,0.2s) ease-in-out;--t396-bgcolor-color:#63b4ff;--t396-bgcolor-image:none;background-color:var(--t396-bgcolor-color,transparent);-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;}#rec1674980401 .tn-elem[data-elem-id="1765796610536"] .tn-atom::after{display:none;}#rec1674980401 .tn-elem[data-elem-id="1765796610536"] .tn-atom .tn-atom__button-content{column-gap:10px;padding:0px 0px 0px 0px;}#rec1674980401 .tn-elem[data-elem-id="1765796610536"] .tn-atom .tn-atom__button-text{transition:color var(--t396-speedhover,0s) ease-in-out;color:#ffffff;}#rec1674980401 .tn-elem[data-elem-id="1765796610536"] .tn-atom .tn-atom__button-border::before{display:none;}#rec1674980401 .tn-elem[data-elem-id="1765796610536"] .tn-atom .tn-atom__button-border::after{display:none;}#rec1674980401 .tn-elem[data-elem-id="1765876787306"]{z-index:3;top:calc(50vh - 346px + 56px);;left:calc(50% - 600px + 138px);;width:350px;height:auto;}#rec1674980401 .tn-elem[data-elem-id="1765876787306"] .tn-atom{border-radius:0px 0px 0px 0px;background-position:center center;border-width:var(--t396-borderwidth,0);border-style:var(--t396-borderstyle,solid);border-color:var(--t396-bordercolor,transparent);transition:background-color var(--t396-speedhover,0s) ease-in-out,color var(--t396-speedhover,0s) ease-in-out,border-color var(--t396-speedhover,0s) ease-in-out,box-shadow var(--t396-shadowshoverspeed,0.2s) ease-in-out;}#rec1674980401 .tn-elem[data-elem-id="1765876787306"] .tn-atom__img{border-radius:0px 0px 0px 0px;object-position:center center;}@media screen and (max-width:1199px){#rec1674980401 .tn-elem[data-elem-id="1765876787306"]{display:table;height:auto;}}@media screen and (max-width:959px){#rec1674980401 .tn-elem[data-elem-id="1765876787306"]{display:table;height:auto;}}@media screen and (max-width:639px){#rec1674980401 .tn-elem[data-elem-id="1765876787306"]{display:table;height:auto;}}@media screen and (max-width:479px){#rec1674980401 .tn-elem[data-elem-id="1765876787306"]{display:table;top:30px;;left:calc(50% - 160px + 10px);;width:334px;height:auto;}}</style>
-        <div class='t396'>
-            <div class="t396__artboard" data-artboard-recid="1674980401" data-artboard-screens="320,480,640,960,1200" data-artboard-height="692" data-artboard-valign="center" data-artboard-height_vh="100" data-artboard-upscale="grid" data-artboard-height-res-320="704" data-artboard-height-res-480="692" data-artboard-height-res-640="692" data-artboard-height-res-960="692">
-                <div class="t396__carrier" data-artboard-recid="1674980401"></div>
-                <div class="t396__filter" data-artboard-recid="1674980401"></div>
-                
-                <!-- КАРТИНКА СЕМЬИ (photo.png.webp) -->
-                <div class='t396__elem tn-elem tn-elem__16749804011765792345353' data-elem-id='1765792345353' data-elem-type='shape' data-field-top-value="20" data-field-left-value="592" data-field-height-value="612" data-field-width-value="588" data-field-axisy-value="top" data-field-axisx-value="left" data-field-container-value="grid" data-field-topunits-value="px" data-field-leftunits-value="px" data-field-heightunits-value="px" data-field-widthunits-value="px" data-field-widthmode-value="fixed" data-field-heightmode-value="fixed" data-field-top-res-320-value="123" data-field-left-res-320-value="10" data-field-height-res-320-value="312" data-field-width-res-320-value="300" data-field-widthmode-res-320-value="fixed">
-                    <div class='tn-atom t-bgimg' data-original="images/photo.png.webp" aria-label='' role="img"></div>
-                </div>
-                
-                <!-- ЗАГОЛОВОК -->
-                <div class='t396__elem tn-elem tn-elem__16749804011765792550240' data-elem-id='1765792550240' data-elem-type='text' data-field-top-value="156" data-field-left-value="80" data-field-height-value="156" data-field-width-value="427" data-field-axisy-value="top" data-field-axisx-value="left" data-field-container-value="grid" data-field-topunits-value="px" data-field-leftunits-value="px" data-field-heightunits-value="px" data-field-widthunits-value="px" data-field-textfit-value="autoheight" data-field-fontsize-value="52" data-field-top-res-320-value="459" data-field-left-res-320-value="10" data-field-height-res-320-value="48" data-field-width-res-320-value="298" data-field-textfit-res-320-value="fixedsize" data-field-fontsize-res-320-value="24">
-                    <div class='tn-atom' field='tn_text_1765792550240'>Безопасность ребёнка в&nbsp;одном приложении</div>
-                </div>
-                
-                <!-- ПОДЗАГОЛОВОК -->
-                <div class='t396__elem tn-elem tn-elem__16749804011765792828961' data-elem-id='1765792828961' data-elem-type='text' data-field-top-value="344" data-field-left-value="137" data-field-height-value="100" data-field-width-value="313" data-field-axisy-value="top" data-field-axisx-value="left" data-field-container-value="grid" data-field-topunits-value="px" data-field-leftunits-value="px" data-field-heightunits-value="px" data-field-widthunits-value="px" data-field-textfit-value="autoheight" data-field-fontsize-value="20" data-field-top-res-320-value="523" data-field-left-res-320-value="14" data-field-width-res-320-value="291" data-field-fontsize-res-320-value="16">
-                    <div class='tn-atom' field='tn_text_1765792828961'>Отслеживайте местоположение, активность и безопасность смартфона ребёнка в реальном времени</div>
-                </div>
-                
-                <!-- БЕЙДЖ KIDS PROTECTION (наезжает на картинку справа снизу) -->
-                <div class='t396__elem tn-elem tn-elem__16749804011765796224508000002 t-animate' data-elem-id='1765796224508000002' data-elem-type='shape' data-field-top-value="290" data-field-left-value="380" data-field-height-value="43" data-field-width-value="192" data-field-axisy-value="top" data-field-axisx-value="left" data-field-container-value="grid" data-field-topunits-value="px" data-field-leftunits-value="px" data-field-heightunits-value="px" data-field-widthunits-value="px" data-animate-style="fadeindown" data-animate-duration="1.3" data-animate-distance="100" data-field-top-res-320-value="423" data-field-left-res-320-value="187" data-field-height-res-320-value="27" data-field-width-res-320-value="118">
-                    <div class='tn-atom'></div>
-                </div>
-                <div class='t396__elem tn-elem tn-elem__16749804011765796224508000003 t-animate' data-elem-id='1765796224508000003' data-elem-type='text' data-field-top-value="296" data-field-left-value="400" data-field-height-value="31" data-field-width-value="156" data-field-axisy-value="top" data-field-axisx-value="left" data-field-container-value="grid" data-field-topunits-value="px" data-field-leftunits-value="px" data-field-heightunits-value="px" data-field-widthunits-value="px" data-animate-style="fadeindown" data-animate-duration="1.3" data-animate-distance="100" data-field-textfit-value="autoheight" data-field-fontsize-value="20" data-field-top-res-320-value="427" data-field-left-res-320-value="199" data-field-width-res-320-value="96" data-field-fontsize-res-320-value="12">
-                    <div class='tn-atom' field='tn_text_1765796224508000003'>Kids Protection</div>
-                </div>
-                
-                <!-- КНОПКА -->
-                <div class='t396__elem tn-elem tn-elem__16749804011765796610536' data-elem-id='1765796610536' data-elem-type='button' data-field-top-value="508" data-field-left-value="191" data-field-height-value="55" data-field-width-value="200" data-field-axisy-value="top" data-field-axisx-value="left" data-field-container-value="grid" data-field-topunits-value="px" data-field-leftunits-value="px" data-field-heightunits-value="px" data-field-widthunits-value="px" data-field-textfit-value="fixedsize" data-field-fontsize-value="14" data-field-top-res-320-value="619" data-field-left-res-320-value="60">
-                    <a class='tn-atom' href="#890">
-                        <div class='tn-atom__button-content'>
-                            <span class="tn-atom__button-text">УЗНАТЬ БОЛЬШЕ</span>
-                        </div>
-                        <span class="tn-atom__button-border"></span>
-                    </a>
-                </div>
-                
-                <!-- ЛОГОТИП (9uoj.png.webp) - САМЫЙ ВЕРХ -->
-                <div class='t396__elem tn-elem tn-elem__16749804011765876787306' data-elem-id='1765876787306' data-elem-type='image' data-field-top-value="56" data-field-left-value="138" data-field-height-value="87" data-field-width-value="350" data-field-axisy-value="top" data-field-axisx-value="left" data-field-container-value="grid" data-field-topunits-value="px" data-field-leftunits-value="px" data-field-heightunits-value="px" data-field-widthunits-value="px" data-field-filewidth-value="1680" data-field-fileheight-value="417" data-field-heightmode-value="hug" data-field-top-res-320-value="30" data-field-left-res-320-value="10" data-field-height-res-320-value="83" data-field-width-res-320-value="334">
-                    <div class='tn-atom'>
-                        <img class='tn-atom__img t-img' data-original='images/9uoj.png.webp' src='images/9uoj.png.webp' alt='' imgfield='tn_img_1765876787306'/>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <script>t_onReady(function() {t_onFuncLoad('t396_init',function() {t396_init('1674980401');});});</script>
+<!-- ====== HERO БЛОК ====== -->
+<div class="hero-block">
+    <!-- 1. ЛОГОТИП (9uoj.png.webp) - САМЫЙ ВЕРХ -->
+    <div class="hero-logo">
+        <img src="images/9uoj.png.webp" alt="KIDS PROTECTION">
     </div>
-
-    <!-- REC 1694346671 - 4 телефона в ОДИН РЯД -->
-    <div id="rec1694346671" class="r t-rec t-rec_pt_30 t-rec_pb_90" style="padding-top:30px;padding-bottom:90px; " data-record-type="170">
-        <div class="t156">
-            <div class="t-container">
-                <div class="t-col t-col_12">
-                    <div class="t156__wrapper" style="display:flex; justify-content:center; gap:15px; flex-wrap:wrap; overflow:visible;">
-                        <div class="t156__item" style="flex:0 0 auto; width:auto;" itemscope itemtype="http://schema.org/ImageObject">
-                            <img class="t-img" imgfield="gi_img__0" src="images/iphone-4.png.webp" data-original="images/iphone-4.png.webp" data-zoom-target="0" data-zoomable="yes" data-img-zoom-url="images/iphone-4.png.webp" style="width:100%; max-width:160px;" alt="">
-                        </div>
-                        <div class="t156__item" style="flex:0 0 auto; width:auto;" itemscope itemtype="http://schema.org/ImageObject">
-                            <img class="t-img" imgfield="gi_img__1" src="images/iphone-3.png.webp" data-original="images/iphone-3.png.webp" data-zoom-target="1" data-zoomable="yes" data-img-zoom-url="images/iphone-3.png.webp" style="width:100%; max-width:160px;" alt="">
-                        </div>
-                        <div class="t156__item" style="flex:0 0 auto; width:auto;" itemscope itemtype="http://schema.org/ImageObject">
-                            <img class="t-img" imgfield="gi_img__2" src="images/iphone-2.png.webp" data-original="images/iphone-2.png.webp" data-zoom-target="2" data-zoomable="yes" data-img-zoom-url="images/iphone-2.png.webp" style="width:100%; max-width:160px;" alt="">
-                        </div>
-                        <div class="t156__item" style="flex:0 0 auto; width:auto;" itemscope itemtype="http://schema.org/ImageObject">
-                            <img class="t-img" imgfield="gi_img__3" src="images/iphone-1.png.webp" data-original="images/iphone-1.png.webp" data-zoom-target="3" data-zoomable="yes" data-img-zoom-url="images/iphone-1.png.webp" style="width:100%; max-width:160px;" alt="">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+    
+    <!-- 2. КАРТИНКА СЕМЬИ (photo.png.webp) -->
+    <div class="hero-family">
+        <img src="images/photo.png.webp" alt="Семья">
     </div>
-
-    <a name="890" style="font-size:0;"></a>
-
-    <!-- REC 1674980441 - Синий блок с цитатой -->
-    <div id="rec1674980441" class="r t-rec t-rec_pb_0" style="padding-bottom:0px;background-color:#63b4ff;" data-animationappear="off" data-record-type="18" data-bg-color="#63b4ff">
-        <div class="t-cover" id="recorddiv1674980441" bgimgfield="img" style="height:75vh;background-color: #63b4ff;">
-            <div class="t-cover__carrier" id="coverCarry1674980441" data-content-cover-id="1674980441" data-content-cover-bg="" data-display-changed="true" data-content-cover-height="75vh" data-content-cover-parallax="" data-content-use-image-for-mobile-cover="" style="height:75vh;background-attachment:scroll;"></div>
-            <div class="t-cover__filter" style="height:75vh;background-image: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,0));"></div>
-            <div class="t-container">
-                <div class="t-col t-col_12">
-                    <div class="t-cover__wrapper t-valign_middle" style="height:75vh;">
-                        <div class="t001 t-align_center">
-                            <div class="t001__wrapper" data-hook-content="covercontent">
-                                <div class="t001__title t-title t-title_xl t-animate" data-animate-style="fadein" data-animate-group="yes" field="title">Мы&nbsp;создали инструмент, который работает незаметно, уважает личное пространство и&nbsp;даёт главное&nbsp;— <strong>спокойствие за&nbsp;тех, кого вы&nbsp;любите</strong>.</div>
-                                <span class="space"></span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <style>#rec1674980441 .t001__title{font-size:52px;}</style>
+    
+    <!-- 3. БЕЙДЖ KIDS PROTECTION - НАЕЗЖАЕТ НА КАРТИНКУ -->
+    <div class="hero-badge">
+        <span>Kids Protection</span>
     </div>
-
-    <!-- REC 1674980471 - 6 преимуществ -->
-    <div id="rec1674980471" class="r t-rec t-rec_pt_150 t-rec_pb_150" style="padding-top:150px;padding-bottom:150px;" data-record-type="490">
-        <div class="t490">
-            <div class="t-section__container t-container t-container_flex">
-                <div class="t-col t-col_12">
-                    <div class="t-section__title t-title t-title_xs t-align_center t-margin_auto" field="btitle" style="margin-bottom:105px;">НАШИ ПРЕИМУЩЕСТВА</div>
-                </div>
-            </div>
-            <div class="t490__container t-container_flex t-card__container t-container">
-                <div class="t-card__col t-card__col_withoutbtn t490__col t-col t-col_4 t-align_center t-item">
-                    <img class="t490__img t-img" src="images/chatgpt_image_16__20.png.webp" data-original="images/chatgpt_image_16__20.png.webp" alt="" style="width:120px; height:120px; object-fit:contain; margin-bottom:20px; border-radius:50%;">
-                    <div class="t490__wrappercenter">
-                        <div class="t-card__title t-name t-name_xl" field="li_title__1476968690512"><strong>Мониторинг активности</strong></div>
-                        <div class="t-card__descr t-descr t-descr_xs" field="li_descr__1476968690512">Родители видят, какими приложениями пользуется ребенок и насколько часто</div>
-                    </div>
-                </div>
-                <div class="t-card__col t-card__col_withoutbtn t490__col t-col t-col_4 t-align_center t-item">
-                    <img class="t490__img t-img" src="images/56.jpeg.webp" data-original="images/56.jpeg.webp" alt="" style="width:120px; height:120px; object-fit:contain; margin-bottom:20px; border-radius:50%;">
-                    <div class="t490__wrappercenter">
-                        <div class="t-card__title t-name t-name_xl" field="li_title__1476968700508"><strong>Установление ограничений</strong></div>
-                        <div class="t-card__descr t-descr t-descr_xs" field="li_descr__1476968700508">Возможность ограничить доступ к&nbsp;определенным приложениям или установить лимит времени их&nbsp;использования</div>
-                    </div>
-                </div>
-                <div class="t-card__col t-card__col_withoutbtn t490__col t-col t-col_4 t-align_center t-item">
-                    <img class="t490__img t-img" src="images/chatgpt_image_16__20(1).png.webp" data-original="images/chatgpt_image_16__20(1).png.webp" alt="" style="width:120px; height:120px; object-fit:contain; margin-bottom:20px; border-radius:50%;">
-                    <div class="t490__wrappercenter">
-                        <div class="t-card__title t-name t-name_xl" field="li_title__1476968722790"><strong>Обеспечение безопасности</strong></div>
-                        <div class="t-card__descr t-descr t-descr_xs" field="li_descr__1476968722790">Защита от&nbsp;нежелательного контента и&nbsp;опасных контактов</div>
-                    </div>
-                </div>
-                <div class="t-card__col t-card__col_withoutbtn t490__col t-col t-col_4 t-align_center t-item">
-                    <img class="t490__img t-img" src="images/chatgpt_image_16__20(2).png.webp" data-original="images/chatgpt_image_16__20(2).png.webp" alt="" style="width:120px; height:120px; object-fit:contain; margin-bottom:20px; border-radius:50%;">
-                    <div class="t490__wrappercenter">
-                        <div class="t-card__title t-name t-name_xl" field="li_title__1482408317745"><strong>Повышение дисциплины</strong></div>
-                        <div class="t-card__descr t-descr t-descr_xs" field="li_descr__1482408317745">Формирование полезных привычек использования гаджетов</div>
-                    </div>
-                </div>
-                <div class="t-card__col t-card__col_withoutbtn t490__col t-col t-col_4 t-align_center t-item">
-                    <img class="t490__img t-img" src="images/chatgpt_image_16__20(3).png.webp" data-original="images/chatgpt_image_16__20(3).png.webp" alt="" style="width:120px; height:120px; object-fit:contain; margin-bottom:20px; border-radius:50%;">
-                    <div class="t490__wrappercenter">
-                        <div class="t-card__title t-name t-name_xl" field="li_title__1482408319814"><strong>Предупреждение рисков</strong></div>
-                        <div class="t-card__descr t-descr t-descr_xs" field="li_descr__1482408319814">Своевременное выявление признаков зависимости или чрезмерного увлечения гаджетами</div>
-                    </div>
-                </div>
-                <div class="t-card__col t-card__col_withoutbtn t490__col t-col t-col_4 t-align_center t-item">
-                    <img class="t490__img t-img" src="images/chatgpt_image_16__20(4).png.webp" data-original="images/chatgpt_image_16__20(4).png.webp" alt="" style="width:120px; height:120px; object-fit:contain; margin-bottom:20px; border-radius:50%;">
-                    <div class="t490__wrappercenter">
-                        <div class="t-card__title t-name t-name_xl" field="li_title__1482408321577"><strong>Поддержка родителей</strong></div>
-                        <div class="t-card__descr t-descr t-descr_xs" field="li_descr__1482408321577">Облегчение процесса воспитания в цифровую эпоху</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <script>t_onReady(function() {t_onFuncLoad('t490_init',function() {t490_init('1674980471');});});</script>
-    </div>
-
-    <!-- REC 1694305521 - Тарифы -->
-    <div id="rec1694305521" class="r t-rec t-rec_pt_90 t-rec_pb_120" style="padding-top:90px;padding-bottom:120px;" data-animationappear="off" data-record-type="1070">
-        <div class="t1070" data-display-changed="true">
-            <div class="t-section__container t-container t-container_flex">
-                <div class="t-col t-col_12">
-                    <div class="t-section__title t-title t-title_xs t-align_center t-margin_auto" field="btitle" style="margin-bottom:40px;">Тарифы подписки</div>
-                    <div class="t-section__descr t-descr t-descr_xl t-align_center t-margin_auto" field="bdescr" style="margin-bottom:105px; max-width:560px;">
-                        <p style="text-align: center;">В каждом тарифном плане свои преимущества и функционал.</p>
-                        <p style="text-align: center; margin-top: 10px;">В режиме бета-тестирования все тарифы бесплатны</p>
-                        <p style="text-align: center;">Окончание тестирования: 01.08.2026г.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="t-container t-card__container t1070__withfeatured">
-                <div class="t1070__row">
-                    <div class="t1070__col t-card__col t-col t-col_4 t-align_center">
-                        <div class="t1070__content" style="border: 1px solid #e0e6ed;">
-                            <div class="t1070__imgwrapper">
-                                <div class="t1070__bgimg t1070__img_circle t-margin_auto t-bgimg" bgimgfield="li_img__5618461141970" data-original="images/53.png.webp" style="background-image: url('images/53.png.webp'); width:100px; height:100px; background-size:cover; background-position:center; border-radius:50%; margin:0 auto 20px;"></div>
-                            </div>
-                            <div class="t-card__title t-name t-name_xl" field="li_title__5618461141970">Подписка на 3 месяца</div>
-                            <div class="t-card__descr t-descr t-descr_xs" field="li_descr__5618461141970">Бесплатно до окончания бета-тестирования 01.08.2026г.</div>
-                            <div class="t1070__price-wrap">
-                                <div class="t1070__price t1070__price_current t-name t-name_md" field="li_price__5618461141970">0 рублей</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="t1070__col t-card__col t-col t-col_4 t-align_center">
-                        <div class="t1070__content" style="border: 1px solid #e0e6ed;">
-                            <div class="t1070__imgwrapper">
-                                <div class="t1070__bgimg t1070__img_circle t-margin_auto t-bgimg" bgimgfield="li_img__5618461141971" data-original="images/chatgpt_image_15__20.png.webp" style="background-image: url('images/chatgpt_image_15__20.png.webp'); width:100px; height:100px; background-size:cover; background-position:center; border-radius:50%; margin:0 auto 20px;"></div>
-                            </div>
-                            <div class="t-card__title t-name t-name_xl" field="li_title__5618461141971">Подписка на 6 месяцев</div>
-                            <div class="t-card__descr t-descr t-descr_xs" field="li_descr__5618461141971">Бесплатно до окончания бета-тестирования 01.08.2026г.</div>
-                            <div class="t1070__price-wrap">
-                                <div class="t1070__price t1070__price_current t-name t-name_md" field="li_price__5618461141971">0 рублей</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="t1070__col t-card__col t-col t-col_4 t-align_center">
-                        <div class="t1070__content" style="border: 1px solid #e0e6ed;">
-                            <div class="t1070__imgwrapper">
-                                <div class="t1070__bgimg t1070__img_circle t-margin_auto t-bgimg" bgimgfield="li_img__5618461141972" data-original="images/chatgpt_image_15__20(1).webp" style="background-image: url('images/chatgpt_image_15__20(1).webp'); width:100px; height:100px; background-size:cover; background-position:center; border-radius:50%; margin:0 auto 20px;"></div>
-                            </div>
-                            <div class="t-card__title t-name t-name_xl" field="li_title__5618461141972">Подписка на 12 месяцев</div>
-                            <div class="t-card__descr t-descr t-descr_xs" field="li_descr__5618461141972">Бесплатно до окончания бета-тестирования 01.08.2026г.</div>
-                            <div class="t1070__price-wrap">
-                                <div class="t1070__price t1070__price_current t-name t-name_md" field="li_price__5618461141972">0 рублей</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <script>t_onReady(function() {t_onFuncLoad('t1070_init',function() {t1070_init('1694305521');});window.addEventListener('resize',t_throttle(function() {t_onFuncLoad('t1070_init',function() {t1070_init('1694305521');});},250));});</script>
-    </div>
-
-    <!-- REC 1674980451 - Noroot лого -->
-    <div id="rec1674980451" class="r t-rec t-rec_pt_105 t-rec_pb_30" style="padding-top:105px;padding-bottom:30px;background-color:#fafafa;" data-animationappear="off" data-record-type="3" data-bg-color="#fafafa">
-        <div class="t107">
-            <div class="t-align_center" itemscope itemtype="http://schema.org/ImageObject">
-                <img class="t-img t-width t107__widthauto" src="images/noroot.png.webp" data-original="images/noroot.png.webp" imgfield="img" alt="" style="max-width:300px; width:100%;">
-            </div>
-        </div>
-    </div>
-
-    <!-- REC 1741326241 - Cookie -->
-    <div id="rec1741326241" class="r t-rec" style=" " data-animationappear="off" data-record-type="886">
-        <div class="t886 t886_closed" data-storage-item="t886cookiename_19186026" style="right:20px;">
-            <div class="t886__wrapper" style="background-color:#ebebeb; width:600px;">
-                <div class="t886__text t-text t-text_xs t-valign_middle" field="text">Сайт использует файлы cookie. Cookie запоминают ваши действия и предпочтения для лучшего взаимодействия в интернете.</div>
-                <div class="t-btn t-btnflex t-btnflex_type_button t-btnflex_sm t886__btn" type="button"><span class="t-btnflex__text">OK</span></div>
-            </div>
-        </div>
-        <script type="text/javascript">t_onReady(function() {t_onFuncLoad('t886_init',function() {t886_init('1741326241');});});</script>
-    </div>
-
-    <!-- REC 1741422211 - GDPR -->
-    <div id="rec1741422211" class="r t-rec" style=" " data-animationappear="off" data-record-type="657">
-        <div class="t657 t657_rectangle t657_closed" data-storage-item="t657cookiename_19186026" style="">
-            <div class="t657__wrapper t-align_center" role="alertdialog" aria-modal="false" style="background:#ffffff;">
-                <div class="t657__text t-name t-descr_xxs" field="text"><strong>Уважаемые посетители, наш сайт собирает персональные данные.</strong><br /><a href="/privacy" target="_blank" rel="noreferrer noopener" style="box-shadow: none; text-decoration: none; border-bottom-style: solid; border-bottom-color: rgb(99, 180, 255);">Ознакомьтесь с Политикой&nbsp;в отношении&nbsp;обработки&nbsp;персональных&nbsp;данных.</a></div>
-                <div class="t-btn t-btnflex t-btnflex_type_button t-btnflex_xs t657__btn" type="button"><span class="t-btnflex__text">Я принимаю</span></div>
-                <button type="button" class="t657__close-button t657__icon-close" aria-label="Закрыть уведомление">
-                    <svg role="presentation" width="10px" height="10px" viewBox="0 0 23 23" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                        <desc>Close</desc>
-                        <g stroke="none" stroke-width="1" fill="#000" fill-rule="evenodd">
-                            <rect transform="translate(11.313708, 11.313708) rotate(-45.000000) translate(-11.313708, -11.313708) " x="10.3137085" y="-3.6862915" width="2" height="30"></rect>
-                            <rect transform="translate(11.313708, 11.313708) rotate(-315.000000) translate(-11.313708, -11.313708) " x="10.3137085" y="-3.6862915" width="2" height="30"></rect>
-                        </g>
-                    </svg>
-                </button>
-            </div>
-        </div>
-        <script>t_onReady(function() {t_onFuncLoad('t657_init',function() {t657_init('1741422211');});});</script>
-    </div>
-
-    <!-- REC 1674980461 - Скачать приложение -->
-    <div id="rec1674980461" class="r t-rec t-rec_pt_30 t-rec_pb_120" style="padding-top:30px;padding-bottom:120px;background-color:#fafafa;" data-animationappear="off" data-record-type="392" data-bg-color="#fafafa">
-        <div class="t-container">
-            <div class="t-col t-col_6 t-prefix_3 t-align_center">
-                <div class="t392__title t-heading t-heading_lg" field="title">Скачать приложение</div>
-                <div class="t392__descr t-descr t-descr_xs" field="descr">Временно пока только на RuStore<br /><br /></div>
-                <div class="t392__buttonwrapper">
-                    <img src="images/photo.png" alt="Скачать приложение" style="max-width:250px; width:100%; margin:0 auto; display:block;">
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- REC 1705965681 - Footer -->
-    <div id="rec1705965681" class="r t-rec t-rec_pt_0 t-rec_pb_75" style="padding-top:0px;padding-bottom:75px;background-color:#171717;" data-animationappear="off" data-record-type="452" data-bg-color="#171717">
-        <div class="t452" id="t-footer_1705965681">
-            <div class="t452__maincontainer" style="height: auto; padding: 40px 0;">
-                <div class="t452__content" style="display: flex; justify-content: space-between; flex-wrap: wrap; gap: 40px; max-width: 1200px; margin: 0 auto; padding: 0 20px;">
-                    <div class="t452__col" style="flex: 1; min-width: 250px;">
-                        <div class="t452__typo t452__copyright" style="color: #ffffff !important;">
-                            <p style="margin: 5px 0; color: #ffffff;">Общество с ограниченной ответственностью «Новые технологии».</p>
-                            <p style="margin: 5px 0; color: #ffffff;">354393, Краснодарский край, с Липники, тер. снт Липники, д. 92</p>
-                            <p style="margin: 5px 0; color: #ffffff;">ИНН 2367044493</p>
-                            <p style="margin: 5px 0; color: #ffffff;">КПП 236701001</p>
-                            <p style="margin: 5px 0; color: #ffffff;">ОГРН 1252300056876</p>
-                        </div>
-                    </div>
-                    <div class="t452__col" style="flex: 1; min-width: 250px;">
-                        <div class="t452__typo t452__copyright" style="color: #ffffff !important;">
-                            <p style="margin: 5px 0; color: #ffffff;">Наименование банка</p>
-                            <p style="margin: 5px 0; color: #ffffff;">ФИЛИАЛ "РОСТОВСКИЙ" АО "АЛЬФА-БАНК"</p>
-                            <p style="margin: 5px 0; color: #ffffff;">БИК 046015207</p>
-                            <p style="margin: 5px 0; color: #ffffff;">Кор. счет 30101810500000000207</p>
-                            <p style="margin: 5px 0; color: #ffffff;">Расчетный счет 40702810926410000654</p>
-                            <p style="margin: 5px 0; color: #ffffff;">Генеральный директор: Смирнова Диана Александровна</p>
-                        </div>
-                    </div>
-                    <div class="t452__col" style="flex: 0 0 auto; text-align: right;">
-                        <a class="t452_scrolltop" href="javascript:void(0);" onclick="window.scrollTo({top:0,behavior:'smooth'});" style="color: #ffffff !important; background: none !important; padding: 0 !important; border-radius: 0 !important; display: inline-flex !important; align-items: center !important; gap: 5px !important; text-decoration: none !important; font-weight: 400 !important; font-size: 14px !important;">
-                            Вверх ↑
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
+    
+    <!-- 4. ЗАГОЛОВОК -->
+    <h1 class="hero-title">Безопасность ребёнка в одном приложении</h1>
+    
+    <!-- 5. ПОДЗАГОЛОВОК -->
+    <p class="hero-subtitle">Отслеживайте местоположение, активность и безопасность смартфона ребёнка в реальном времени</p>
+    
+    <!-- 6. КНОПКА -->
+    <a href="#tariffs" class="hero-btn">УЗНАТЬ БОЛЬШЕ</a>
 </div>
 
-<script type="text/javascript">
-    if(!window.mainTracker) {window.mainTracker='tilda';}
-    window.tildastatcookie='no';
-</script>
+<!-- ====== ТЕЛЕФОНЫ - 4 ШТУКИ В ОДИН РЯД ====== -->
+<div class="phones-block">
+    <div class="phones-wrapper">
+        <div class="phone-item"><img src="images/iphone-4.png.webp" alt=""></div>
+        <div class="phone-item"><img src="images/iphone-3.png.webp" alt=""></div>
+        <div class="phone-item"><img src="images/iphone-2.png.webp" alt=""></div>
+        <div class="phone-item"><img src="images/iphone-1.png.webp" alt=""></div>
+    </div>
+</div>
+
+<!-- ====== СИНИЙ БЛОК С ЦИТАТОЙ ====== -->
+<div class="blue-quote">
+    <p>Мы создали инструмент, который работает незаметно, уважает личное пространство и даёт главное — <strong>спокойствие за тех, кого вы любите</strong>.</p>
+</div>
+
+<!-- ====== ПРЕИМУЩЕСТВА ====== -->
+<div class="advantages">
+    <h2 class="section-title">НАШИ ПРЕИМУЩЕСТВА</h2>
+    <div class="advantages-grid">
+        <div class="advantage-item">
+            <img src="images/chatgpt_image_16__20.png.webp" alt="">
+            <h3><strong>Мониторинг активности</strong></h3>
+            <p>Родители видят, какими приложениями пользуется ребенок и насколько часто</p>
+        </div>
+        <div class="advantage-item">
+            <img src="images/__56.jpeg.webp" alt="">
+            <h3><strong>Установление ограничений</strong></h3>
+            <p>Возможность ограничить доступ к определенным приложениям или установить лимит времени их использования</p>
+        </div>
+        <div class="advantage-item">
+            <img src="images/chatgpt_image_16__20(1).png.webp" alt="">
+            <h3><strong>Обеспечение безопасности</strong></h3>
+            <p>Защита от нежелательного контента и опасных контактов</p>
+        </div>
+        <div class="advantage-item">
+            <img src="images/chatgpt_image_16__20(2).png.webp" alt="">
+            <h3><strong>Повышение дисциплины</strong></h3>
+            <p>Формирование полезных привычек использования гаджетов</p>
+        </div>
+        <div class="advantage-item">
+            <img src="images/chatgpt_image_16__20(3).png.webp" alt="">
+            <h3><strong>Предупреждение рисков</strong></h3>
+            <p>Своевременное выявление признаков зависимости или чрезмерного увлечения гаджетами</p>
+        </div>
+        <div class="advantage-item">
+            <img src="images/chatgpt_image_16__20(4).png.webp" alt="">
+            <h3><strong>Поддержка родителей</strong></h3>
+            <p>Облегчение процесса воспитания в цифровую эпоху</p>
+        </div>
+    </div>
+</div>
+
+<!-- ====== ТАРИФЫ ====== -->
+<div class="tariffs" id="tariffs">
+    <h2 class="section-title">Тарифы подписки</h2>
+    <div class="tariffs-subtitle">
+        В каждом тарифном плане свои преимущества и функционал.<br>
+        В режиме бета-тестирования все тарифы бесплатны<br>
+        Окончание тестирования: 01.08.2026г.
+    </div>
+    <div class="tariffs-grid">
+        <div class="tariff-item">
+            <img src="images/53.png.webp" alt="">
+            <h3>Подписка на 3 месяца</h3>
+            <p>Бесплатно до окончания бета-тестирования 01.08.2026г.</p>
+            <div class="tariff-price">0 рублей</div>
+        </div>
+        <div class="tariff-item">
+            <img src="images/chatgpt_image_15__20.png.webp" alt="">
+            <h3>Подписка на 6 месяцев</h3>
+            <p>Бесплатно до окончания бета-тестирования 01.08.2026г.</p>
+            <div class="tariff-price">0 рублей</div>
+        </div>
+        <div class="tariff-item">
+            <img src="images/chatgpt_image_15__20(1).webp" alt="">
+            <h3>Подписка на 12 месяцев</h3>
+            <p>Бесплатно до окончания бета-тестирования 01.08.2026г.</p>
+            <div class="tariff-price">0 рублей</div>
+        </div>
+    </div>
+</div>
+
+<!-- ====== NOROOT ЛОГО ====== -->
+<div class="noroot">
+    <img src="images/noroot.png.webp" alt="">
+</div>
+
+<!-- ====== СКАЧАТЬ ПРИЛОЖЕНИЕ ====== -->
+<div class="download">
+    <h2>Скачать приложение</h2>
+    <p>Временно пока только на RuStore</p>
+    <img src="images/photo.png" alt="Скачать приложение">
+</div>
+
+<!-- ====== ФУТЕР ====== -->
+<div class="footer">
+    <div class="footer-inner">
+        <div class="footer-col">
+            <p>Общество с ограниченной ответственностью «Новые технологии».</p>
+            <p>354393, Краснодарский край, с Липники, тер. снт Липники, д. 92</p>
+            <p>ИНН 2367044493</p>
+            <p>КПП 236701001</p>
+            <p>ОГРН 1252300056876</p>
+        </div>
+        <div class="footer-col">
+            <p>Наименование банка</p>
+            <p>ФИЛИАЛ "РОСТОВСКИЙ" АО "АЛЬФА-БАНК"</p>
+            <p>БИК 046015207</p>
+            <p>Кор. счет 30101810500000000207</p>
+            <p>Расчетный счет 40702810926410000654</p>
+            <p>Генеральный директор: Смирнова Диана Александровна</p>
+        </div>
+        <div class="footer-col footer-right">
+            <a href="#" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;">Вверх ↑</a>
+        </div>
+    </div>
+</div>
+
+<!-- ====== COOKIE УВЕДОМЛЕНИЕ ====== -->
+<div class="cookie-notice" id="cookieNotice">
+    Сайт использует файлы cookie. Cookie запоминают ваши действия и предпочтения для лучшего взаимодействия в интернете.<br>
+    <button onclick="document.getElementById('cookieNotice').style.display='none';">OK</button>
+</div>
+
+<!-- ====== GDPR УВЕДОМЛЕНИЕ ====== -->
+<div class="gdpr-notice" id="gdprNotice">
+    <button class="gdpr-close" onclick="document.getElementById('gdprNotice').style.display='none';">✕</button>
+    <strong>Уважаемые посетители, наш сайт собирает персональные данные.</strong><br>
+    <a href="/privacy" target="_blank">Ознакомьтесь с Политикой в отношении обработки персональных данных.</a><br>
+    <button onclick="document.getElementById('gdprNotice').style.display='none';">Я принимаю</button>
+</div>
+
 </body>
 </html>
