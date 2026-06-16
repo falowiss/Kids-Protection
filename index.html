@@ -42,50 +42,40 @@
     <script src="https://static.tildacdn.com/js/tilda-zero-scale-1.0.min.js" charset="utf-8" async onerror="this.loaderr='y';"></script>
     <script src="https://static.tildacdn.com/js/tilda-events-1.0.min.js" charset="utf-8" async onerror="this.loaderr='y';"></script>
     <style>
-        /* ===== ТОЛЬКО АДАПТИВНЫЕ СТИЛИ ДЛЯ ТЕЛЕФОНА ===== */
-        /* Ничего не меняем в оригинальных стилях, только добавляем поверх */
-        
+        /* АДАПТИВ КАК В ОРИГИНАЛЬНОМ TILDA */
         @media screen and (max-width: 768px) {
-            /* Герой блок - фикс позиций */
-            #rec1674980401 {
-                min-height: auto !important;
-                height: auto !important;
-                padding-bottom: 30px;
-            }
+            /* Герой блок - сохраняем все картинки */
             #rec1674980401 .t396__artboard {
                 min-height: auto !important;
                 height: auto !important;
-                padding-bottom: 280px;
-                position: relative;
+                padding-bottom: 40px;
             }
             
-            /* Логотип - оставляем сверху по центру */
-            .tn-elem__16749804011765876787306 {
+            /* Логотип - сверху по центру */
+            #rec1674980401 .tn-elem[data-elem-id="1765876787306"] {
                 position: relative !important;
                 top: 20px !important;
-                left: 50% !important;
-                transform: translateX(-50%) !important;
+                left: auto !important;
                 width: 280px !important;
                 margin: 0 auto !important;
             }
             
-            /* Картинка семьи - ставим под логотипом */
-            .tn-elem__16749804011765792345353 {
+            /* Картинка семьи (photo.png.webp) - под логотипом */
+            #rec1674980401 .tn-elem[data-elem-id="1765792345353"] {
                 position: relative !important;
-                top: 30px !important;
-                left: 50% !important;
-                transform: translateX(-50%) !important;
-                width: 280px !important;
-                height: auto !important;
+                top: 20px !important;
+                left: auto !important;
+                width: 300px !important;
+                height: 300px !important;
                 margin: 0 auto !important;
             }
-            .tn-elem__16749804011765792345353 .tn-atom {
-                height: auto !important;
-                min-height: 280px !important;
+            #rec1674980401 .tn-elem[data-elem-id="1765792345353"] .tn-atom {
+                height: 300px !important;
+                background-size: contain !important;
             }
             
             /* Заголовок - под картинкой */
-            .tn-elem__16749804011765792550240 {
+            #rec1674980401 .tn-elem[data-elem-id="1765792550240"] {
                 position: relative !important;
                 top: 20px !important;
                 left: auto !important;
@@ -93,13 +83,12 @@
                 margin: 0 auto !important;
                 text-align: center !important;
             }
-            .tn-elem__16749804011765792550240 .tn-atom {
+            #rec1674980401 .tn-elem[data-elem-id="1765792550240"] .tn-atom {
                 font-size: 28px !important;
-                white-space: normal !important;
             }
             
             /* Подзаголовок */
-            .tn-elem__16749804011765792828961 {
+            #rec1674980401 .tn-elem[data-elem-id="1765792828961"] {
                 position: relative !important;
                 top: 10px !important;
                 left: auto !important;
@@ -107,80 +96,84 @@
                 margin: 0 auto !important;
                 text-align: center !important;
             }
-            .tn-elem__16749804011765792828961 .tn-atom {
+            #rec1674980401 .tn-elem[data-elem-id="1765792828961"] .tn-atom {
                 font-size: 16px !important;
             }
             
-            /* Бейдж Kids Protection */
-            .tn-elem__16749804011765796224508000002 {
+            /* Kids Protection бейдж - наезжает на картинку как в оригинале */
+            #rec1674980401 .tn-elem[data-elem-id="1765796224508000002"] {
                 position: relative !important;
-                top: 15px !important;
-                left: 50% !important;
-                transform: translateX(-50%) !important;
-                width: 130px !important;
-                height: 30px !important;
+                top: -60px !important;
+                left: auto !important;
+                width: 118px !important;
+                height: 27px !important;
                 margin: 0 auto !important;
+                transform: rotate(355deg) !important;
             }
-            .tn-elem__16749804011765796224508000003 {
+            #rec1674980401 .tn-elem[data-elem-id="1765796224508000003"] {
                 position: relative !important;
-                top: -20px !important;
-                left: 50% !important;
-                transform: translateX(-50%) !important;
+                top: -87px !important;
+                left: auto !important;
                 width: auto !important;
                 margin: 0 auto !important;
                 text-align: center !important;
+                transform: rotate(355deg) !important;
             }
-            .tn-elem__16749804011765796224508000003 .tn-atom {
+            #rec1674980401 .tn-elem[data-elem-id="1765796224508000003"] .tn-atom {
                 font-size: 12px !important;
-                white-space: nowrap !important;
             }
             
             /* Кнопка */
-            .tn-elem__16749804011765796610536 {
+            #rec1674980401 .tn-elem[data-elem-id="1765796610536"] {
                 position: relative !important;
-                top: 10px !important;
-                left: 50% !important;
-                transform: translateX(-50%) !important;
+                top: -60px !important;
+                left: auto !important;
                 width: 200px !important;
                 margin: 0 auto !important;
             }
             
-            /* Телефоны - адаптив */
+            /* ТЕЛЕФОНЫ - в ОДИН ряд как в оригинале */
             .t156__wrapper {
-                flex-wrap: wrap !important;
+                display: flex !important;
+                flex-wrap: nowrap !important;
                 justify-content: center !important;
-                gap: 10px !important;
+                gap: 5px !important;
+                overflow-x: auto !important;
             }
             .t156__item {
-                width: 22% !important;
-                min-width: 80px !important;
+                flex: 0 0 auto !important;
+                width: 18% !important;
+                min-width: 70px !important;
+                max-width: 120px !important;
             }
             
-            /* Преимущества - 2 колонки на планшете, 1 на телефоне */
+            /* Преимущества - в 1 колонку как в оригинале на телефоне */
             .t490__container {
-                flex-direction: row !important;
-                flex-wrap: wrap !important;
+                flex-direction: column !important;
+                align-items: center !important;
             }
             .t-card__col {
-                width: 45% !important;
+                width: 100% !important;
+                max-width: 400px !important;
                 margin-bottom: 40px !important;
             }
             .t490__img {
-                width: 80px !important;
-                height: 80px !important;
+                width: 100px !important;
+                height: 100px !important;
             }
             
-            /* Тарифы - 2 колонки */
+            /* Тарифы - в 1 колонку */
             .t1070__row {
-                flex-direction: row !important;
-                flex-wrap: wrap !important;
+                flex-direction: column !important;
+                align-items: center !important;
             }
             .t1070__col {
-                width: 48% !important;
+                width: 100% !important;
+                max-width: 400px !important;
                 margin-bottom: 30px !important;
             }
             
-            /* Синий блок с цитатой */
+            /* Синий блок */
             .t001__title {
                 font-size: 28px !important;
                 padding: 0 20px !important;
@@ -196,24 +189,20 @@
             }
         }
         
-        /* Очень маленькие телефоны (до 480px) */
         @media screen and (max-width: 480px) {
-            .t-card__col {
-                width: 100% !important;
-            }
-            .t1070__col {
-                width: 100% !important;
-            }
             .t156__item {
-                width: 40% !important;
+                width: 22% !important;
+                min-width: 60px !important;
             }
-            .t490__img {
-                width: 70px !important;
-                height: 70px !important;
+            #rec1674980401 .tn-elem[data-elem-id="1765792345353"] {
+                width: 250px !important;
+                height: 250px !important;
+            }
+            #rec1674980401 .tn-elem[data-elem-id="1765792345353"] .tn-atom {
+                height: 250px !important;
             }
         }
-        
-        /* Остальные стили из вашего кода (нетронутые) */
+
         .t452__copyright p {
             color: #ffffff !important;
             opacity: 1 !important;
@@ -244,7 +233,7 @@
 <body class="t-body" style="margin:0;">
 <div id="allrecords" class="t-records" data-hook="blocks-collection-content-node" data-tilda-project-id="19186026" data-tilda-page-id="102826716" data-tilda-formskey="2e4d72b9c70d2603c976f3fa19186026" data-tilda-cookie="no" data-tilda-lazy="yes" data-tilda-root-zone="com" data-tilda-project-country="RU">
 
-    <!-- REC 1674980401 - Hero блок с лого и картинкой семьи (ВАШ ОРИГИНАЛЬНЫЙ КОД) -->
+    <!-- REC 1674980401 - Hero блок с лого и картинкой семьи -->
     <div id="rec1674980401" class="r t-rec" style=" " data-animationappear="off" data-record-type="396">
         <style>#rec1674980401 .t396__artboard {min-height:692px;height:100vh;background-color:#ffffff;}#rec1674980401 .t396__filter {min-height:692px;height:100vh;background-color:rgba(0,0,0,0);}#rec1674980401 .t396__carrier{min-height:692px;height:100vh;background-position:center center;background-attachment:scroll;background-size:cover;background-repeat:no-repeat;}@media screen and (max-width:1199px) {#rec1674980401 .t396__artboard,#rec1674980401 .t396__filter,#rec1674980401 .t396__carrier {min-height:692px;}#rec1674980401 .t396__filter {}#rec1674980401 .t396__carrier {background-attachment:scroll;}}@media screen and (max-width:959px) {#rec1674980401 .t396__artboard,#rec1674980401 .t396__filter,#rec1674980401 .t396__carrier {min-height:692px;}#rec1674980401 .t396__filter {}#rec1674980401 .t396__carrier {background-attachment:scroll;}}@media screen and (max-width:639px) {#rec1674980401 .t396__artboard,#rec1674980401 .t396__filter,#rec1674980401 .t396__carrier {min-height:692px;}#rec1674980401 .t396__filter {}#rec1674980401 .t396__carrier {background-attachment:scroll;}}@media screen and (max-width:479px) {#rec1674980401 .t396__artboard,#rec1674980401 .t396__filter,#rec1674980401 .t396__carrier {min-height:704px;}#rec1674980401 .t396__filter {}#rec1674980401 .t396__carrier {background-attachment:scroll;}}#rec1674980401 .tn-elem[data-elem-id="1765792345353"]{z-index:3;top:calc(50vh - 346px + 20px);;left:calc(50% - 600px + 592px);;width:588px;height:612px;}#rec1674980401 .tn-elem[data-elem-id="1765792345353"] .tn-atom{border-radius:30px 30px 30px 30px;background-position:center center;background-size:cover;background-repeat:no-repeat;border-width:var(--t396-borderwidth,0);border-style:var(--t396-borderstyle,solid);border-color:var(--t396-bordercolor,transparent);transition:background-color var(--t396-speedhover,0s) ease-in-out,color var(--t396-speedhover,0s) ease-in-out,border-color var(--t396-speedhover,0s) ease-in-out,box-shadow var(--t396-shadowshoverspeed,0.2s) ease-in-out;}@media screen and (max-width:1199px){#rec1674980401 .tn-elem[data-elem-id="1765792345353"]{display:table;}}@media screen and (max-width:959px){#rec1674980401 .tn-elem[data-elem-id="1765792345353"]{display:table;}}@media screen and (max-width:639px){#rec1674980401 .tn-elem[data-elem-id="1765792345353"]{display:table;}}@media screen and (max-width:479px){#rec1674980401 .tn-elem[data-elem-id="1765792345353"]{display:table;top:123px;;left:calc(50% - 160px + 10px);;width:300px;height:312px;}}#rec1674980401 .tn-elem[data-elem-id="1765792550240"]{color:#000000;text-align:center;z-index:3;top:calc(50vh - 346px + 156px);;left:calc(50% - 600px + 80px);;width:427px;height:auto;}#rec1674980401 .tn-elem[data-elem-id="1765792550240"] .tn-atom{vertical-align:middle;color:#000000;font-size:52px;font-family:'Roboto',Arial,sans-serif;line-height:1;font-weight:800;background-position:center center;border-width:var(--t396-borderwidth,0);border-style:var(--t396-borderstyle,solid);border-color:var(--t396-bordercolor,transparent);transition:background-color var(--t396-speedhover,0s) ease-in-out,color var(--t396-speedhover,0s) ease-in-out,border-color var(--t396-speedhover,0s) ease-in-out,box-shadow var(--t396-shadowshoverspeed,0.2s) ease-in-out;text-shadow:var(--t396-shadow-text-x,0px) var(--t396-shadow-text-y,0px) var(--t396-shadow-text-blur,0px) rgba(var(--t396-shadow-text-color),var(--t396-shadow-text-opacity,100%));}@media screen and (max-width:1199px){#rec1674980401 .tn-elem[data-elem-id="1765792550240"]{display:table;height:auto;}}@media screen and (max-width:959px){#rec1674980401 .tn-elem[data-elem-id="1765792550240"]{display:table;height:auto;}}@media screen and (max-width:639px){#rec1674980401 .tn-elem[data-elem-id="1765792550240"]{display:table;height:auto;}}@media screen and (max-width:479px){#rec1674980401 .tn-elem[data-elem-id="1765792550240"]{display:table;top:459px;;left:calc(50% - 160px + 10px);;width:298px;height:48px;}#rec1674980401 .tn-elem[data-elem-id="1765792550240"] .tn-atom{vertical-align:middle;white-space:normal;font-size:24px;background-size:cover;}}#rec1674980401 .tn-elem[data-elem-id="1765792828961"]{color:#000000;text-align:center;z-index:3;top:calc(50vh - 346px + 344px);;left:calc(50% - 600px + 137px);;width:313px;height:auto;}#rec1674980401 .tn-elem[data-elem-id="1765792828961"] .tn-atom{vertical-align:middle;color:#000000;font-size:20px;font-family:'Montserrat',Arial,sans-serif;line-height:1;font-weight:400;background-position:center center;border-width:var(--t396-borderwidth,0);border-style:var(--t396-borderstyle,solid);border-color:var(--t396-bordercolor,transparent);transition:background-color var(--t396-speedhover,0s) ease-in-out,color var(--t396-speedhover,0s) ease-in-out,border-color var(--t396-speedhover,0s) ease-in-out,box-shadow var(--t396-shadowshoverspeed,0.2s) ease-in-out;text-shadow:var(--t396-shadow-text-x,0px) var(--t396-shadow-text-y,0px) var(--t396-shadow-text-blur,0px) rgba(var(--t396-shadow-text-color),var(--t396-shadow-text-opacity,100%));}@media screen and (max-width:1199px){#rec1674980401 .tn-elem[data-elem-id="1765792828961"]{display:table;height:auto;}}@media screen and (max-width:959px){#rec1674980401 .tn-elem[data-elem-id="1765792828961"]{display:table;height:auto;}}@media screen and (max-width:639px){#rec1674980401 .tn-elem[data-elem-id="1765792828961"]{display:table;height:auto;}}@media screen and (max-width:479px){#rec1674980401 .tn-elem[data-elem-id="1765792828961"]{display:table;top:523px;;left:calc(50% - 160px + 14px);;width:291px;height:auto;}#rec1674980401 .tn-elem[data-elem-id="1765792828961"] .tn-atom{font-size:16px;background-size:cover;}}#rec1674980401 .tn-elem[data-elem-id="1765796224508000002"]{z-index:3;top:calc(50vh - 346px + 290px);;left:calc(50% - 600px + 380px);;width:192px;height:43px;}#rec1674980401 .tn-elem[data-elem-id="1765796224508000002"] .tn-atom{border-radius:100px 100px 100px 100px;background-color:#63b4ff;background-position:center center;border-width:var(--t396-borderwidth,0);border-style:var(--t396-borderstyle,solid);border-color:var(--t396-bordercolor,transparent);transition:background-color var(--t396-speedhover,0s) ease-in-out,color var(--t396-speedhover,0s) ease-in-out,border-color var(--t396-speedhover,0s) ease-in-out,box-shadow var(--t396-shadowshoverspeed,0.2s) ease-in-out;-webkit-transform:rotate(355deg);-moz-transform:rotate(355deg);transform:rotate(355deg);}@media screen and (max-width:1199px){#rec1674980401 .tn-elem[data-elem-id="1765796224508000002"]{display:table;}}@media screen and (max-width:959px){#rec1674980401 .tn-elem[data-elem-id="1765796224508000002"]{display:table;}}@media screen and (max-width:639px){#rec1674980401 .tn-elem[data-elem-id="1765796224508000002"]{display:table;}}@media screen and (max-width:479px){#rec1674980401 .tn-elem[data-elem-id="1765796224508000002"]{display:table;top:423px;;left:calc(50% - 160px + 187px);;width:118px;height:27px;}}#rec1674980401 .tn-elem[data-elem-id="1765796224508000003"]{color:#ffffff;z-index:3;top:calc(50vh - 346px + 296px);;left:calc(50% - 600px + 400px);;width:156px;height:auto;}#rec1674980401 .tn-elem[data-elem-id="1765796224508000003"] .tn-atom{vertical-align:middle;color:#ffffff;font-size:20px;font-family:'Montserrat',Arial,sans-serif;line-height:1.55;font-weight:400;background-position:center center;border-width:var(--t396-borderwidth,0);border-style:var(--t396-borderstyle,solid);border-color:var(--t396-bordercolor,transparent);transition:background-color var(--t396-speedhover,0s) ease-in-out,color var(--t396-speedhover,0s) ease-in-out,border-color var(--t396-speedhover,0s) ease-in-out,box-shadow var(--t396-shadowshoverspeed,0.2s) ease-in-out;text-shadow:var(--t396-shadow-text-x,0px) var(--t396-shadow-text-y,0px) var(--t396-shadow-text-blur,0px) rgba(var(--t396-shadow-text-color),var(--t396-shadow-text-opacity,100%));-webkit-transform:rotate(355deg);-moz-transform:rotate(355deg);transform:rotate(355deg);}@media screen and (max-width:1199px){#rec1674980401 .tn-elem[data-elem-id="1765796224508000003"]{display:table;height:auto;}}@media screen and (max-width:959px){#rec1674980401 .tn-elem[data-elem-id="1765796224508000003"]{display:table;height:auto;}}@media screen and (max-width:639px){#rec1674980401 .tn-elem[data-elem-id="1765796224508000003"]{display:table;height:auto;}}@media screen and (max-width:479px){#rec1674980401 .tn-elem[data-elem-id="1765796224508000003"]{display:table;top:427px;;left:calc(50% - 160px + 199px);;width:96px;height:auto;}#rec1674980401 .tn-elem[data-elem-id="1765796224508000003"] .tn-atom{font-size:12px;background-size:cover;}}#rec1674980401 .tn-elem[data-elem-id="1765796610536"]{color:#ffffff;text-align:center;z-index:3;top:calc(50vh - 346px + 508px);;left:calc(50% - 600px + 191px);;width:200px;height:55px;}#rec1674980401 .tn-elem[data-elem-id="1765796610536"] .tn-atom{color:#ffffff;font-size:14px;font-family:'Montserrat',Arial,sans-serif;line-height:1.55;font-weight:600;border-radius:30px 30px 30px 30px;background-position:center center;--t396-speedhover:0.2s;transition:background-color var(--t396-speedhover,0s) ease-in-out,color var(--t396-speedhover,0s) ease-in-out,border-color var(--t396-speedhover,0s) ease-in-out,box-shadow var(--t396-shadowshoverspeed,0.2s) ease-in-out;--t396-bgcolor-color:#63b4ff;--t396-bgcolor-image:none;background-color:var(--t396-bgcolor-color,transparent);-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;}#rec1674980401 .tn-elem[data-elem-id="1765796610536"] .tn-atom::after{display:none;}#rec1674980401 .tn-elem[data-elem-id="1765796610536"] .tn-atom .tn-atom__button-content{column-gap:10px;padding:0px 0px 0px 0px;}#rec1674980401 .tn-elem[data-elem-id="1765796610536"] .tn-atom .tn-atom__button-text{transition:color var(--t396-speedhover,0s) ease-in-out;color:#ffffff;}#rec1674980401 .tn-elem[data-elem-id="1765796610536"] .tn-atom .tn-atom__button-border::before{display:none;}#rec1674980401 .tn-elem[data-elem-id="1765796610536"] .tn-atom .tn-atom__button-border::after{display:none;}#rec1674980401 .tn-elem[data-elem-id="1765876787306"]{z-index:3;top:calc(50vh - 346px + 56px);;left:calc(50% - 600px + 138px);;width:350px;height:auto;}#rec1674980401 .tn-elem[data-elem-id="1765876787306"] .tn-atom{border-radius:0px 0px 0px 0px;background-position:center center;border-width:var(--t396-borderwidth,0);border-style:var(--t396-borderstyle,solid);border-color:var(--t396-bordercolor,transparent);transition:background-color var(--t396-speedhover,0s) ease-in-out,color var(--t396-speedhover,0s) ease-in-out,border-color var(--t396-speedhover,0s) ease-in-out,box-shadow var(--t396-shadowshoverspeed,0.2s) ease-in-out;}#rec1674980401 .tn-elem[data-elem-id="1765876787306"] .tn-atom__img{border-radius:0px 0px 0px 0px;object-position:center center;}@media screen and (max-width:1199px){#rec1674980401 .tn-elem[data-elem-id="1765876787306"]{display:table;height:auto;}}@media screen and (max-width:959px){#rec1674980401 .tn-elem[data-elem-id="1765876787306"]{display:table;height:auto;}}@media screen and (max-width:639px){#rec1674980401 .tn-elem[data-elem-id="1765876787306"]{display:table;height:auto;}}@media screen and (max-width:479px){#rec1674980401 .tn-elem[data-elem-id="1765876787306"]{display:table;top:30px;;left:calc(50% - 160px + 10px);;width:334px;height:auto;}}</style>
         <div class='t396'>
@@ -284,23 +273,23 @@
         <script>t_onReady(function() {t_onFuncLoad('t396_init',function() {t396_init('1674980401');});});</script>
     </div>
 
-    <!-- REC 1694346671 - 4 телефона в порядке 4,3,2,1 -->
+    <!-- REC 1694346671 - 4 телефона в порядке 4,3,2,1 (В ОДИН РЯД) -->
     <div id="rec1694346671" class="r t-rec t-rec_pt_30 t-rec_pb_90" style="padding-top:30px;padding-bottom:90px; " data-record-type="170">
         <div class="t156">
             <div class="t-container">
                 <div class="t-col t-col_12">
-                    <div class="t156__wrapper">
-                        <div class="t156__item" itemscope itemtype="http://schema.org/ImageObject">
-                            <img class="t-img" imgfield="gi_img__0" src="images/iphone-4.png.webp" data-original="images/iphone-4.png.webp" data-zoom-target="0" data-zoomable="yes" data-img-zoom-url="images/iphone-4.png.webp" style="width:100%;" alt="">
+                    <div class="t156__wrapper" style="display:flex; justify-content:center; gap:20px; flex-wrap:wrap;">
+                        <div class="t156__item" style="flex:0 0 auto; width:auto;" itemscope itemtype="http://schema.org/ImageObject">
+                            <img class="t-img" imgfield="gi_img__0" src="images/iphone-4.png.webp" data-original="images/iphone-4.png.webp" data-zoom-target="0" data-zoomable="yes" data-img-zoom-url="images/iphone-4.png.webp" style="width:100%; max-width:160px;" alt="">
                         </div>
-                        <div class="t156__item" itemscope itemtype="http://schema.org/ImageObject">
-                            <img class="t-img" imgfield="gi_img__1" src="images/iphone-3.png.webp" data-original="images/iphone-3.png.webp" data-zoom-target="1" data-zoomable="yes" data-img-zoom-url="images/iphone-3.png.webp" style="width:100%;" alt="">
+                        <div class="t156__item" style="flex:0 0 auto; width:auto;" itemscope itemtype="http://schema.org/ImageObject">
+                            <img class="t-img" imgfield="gi_img__1" src="images/iphone-3.png.webp" data-original="images/iphone-3.png.webp" data-zoom-target="1" data-zoomable="yes" data-img-zoom-url="images/iphone-3.png.webp" style="width:100%; max-width:160px;" alt="">
                         </div>
-                        <div class="t156__item" itemscope itemtype="http://schema.org/ImageObject">
-                            <img class="t-img" imgfield="gi_img__2" src="images/iphone-2.png.webp" data-original="images/iphone-2.png.webp" data-zoom-target="2" data-zoomable="yes" data-img-zoom-url="images/iphone-2.png.webp" style="width:100%;" alt="">
+                        <div class="t156__item" style="flex:0 0 auto; width:auto;" itemscope itemtype="http://schema.org/ImageObject">
+                            <img class="t-img" imgfield="gi_img__2" src="images/iphone-2.png.webp" data-original="images/iphone-2.png.webp" data-zoom-target="2" data-zoomable="yes" data-img-zoom-url="images/iphone-2.png.webp" style="width:100%; max-width:160px;" alt="">
                         </div>
-                        <div class="t156__item" itemscope itemtype="http://schema.org/ImageObject">
-                            <img class="t-img" imgfield="gi_img__3" src="images/iphone-1.png.webp" data-original="images/iphone-1.png.webp" data-zoom-target="3" data-zoomable="yes" data-img-zoom-url="images/iphone-1.png.webp" style="width:100%;" alt="">
+                        <div class="t156__item" style="flex:0 0 auto; width:auto;" itemscope itemtype="http://schema.org/ImageObject">
+                            <img class="t-img" imgfield="gi_img__3" src="images/iphone-1.png.webp" data-original="images/iphone-1.png.webp" data-zoom-target="3" data-zoomable="yes" data-img-zoom-url="images/iphone-1.png.webp" style="width:100%; max-width:160px;" alt="">
                         </div>
                     </div>
                 </div>
