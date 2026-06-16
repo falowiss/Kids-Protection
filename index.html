@@ -20,7 +20,7 @@
     <link rel="stylesheet" href="https://static.tildacdn.com/css/tilda-grid-3.0.min.css" type="text/css" media="all" onerror="this.loaderr='y';"/>
     <link rel="stylesheet" href="https://static.tildacdn.com/ws/project19186026/tilda-blocks-page102826716.min.css?t=1768990939" type="text/css" media="all" onerror="this.loaderr='y';" />
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Montserrat:wght@100..900&subset=latin,cyrillic" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;800&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&subset=latin,cyrillic" rel="stylesheet">
     <link rel="stylesheet" href="https://static.tildacdn.com/css/tilda-animation-2.0.min.css" type="text/css" media="all" onerror="this.loaderr='y';" />
     <link rel="stylesheet" href="https://static.tildacdn.com/css/tilda-slds-1.4.min.css" type="text/css" media="print" onload="this.media='all';" onerror="this.loaderr='y';" />
     <noscript><link rel="stylesheet" href="https://static.tildacdn.com/css/tilda-slds-1.4.min.css" type="text/css" media="all" /></noscript>
@@ -44,14 +44,14 @@
     <style>
         /* АДАПТИВ КАК В ОРИГИНАЛЬНОМ TILDA */
         @media screen and (max-width: 768px) {
-            /* Герой блок - сохраняем все картинки */
+            /* Герой блок */
             #rec1674980401 .t396__artboard {
                 min-height: auto !important;
                 height: auto !important;
                 padding-bottom: 40px;
             }
             
-            /* Логотип - сверху по центру */
+            /* Логотип 9uoj.png.webp - сверху по центру */
             #rec1674980401 .tn-elem[data-elem-id="1765876787306"] {
                 position: relative !important;
                 top: 20px !important;
@@ -60,7 +60,7 @@
                 margin: 0 auto !important;
             }
             
-            /* Картинка семьи (photo.png.webp) - под логотипом */
+            /* Картинка семьи photo.png.webp - под логотипом */
             #rec1674980401 .tn-elem[data-elem-id="1765792345353"] {
                 position: relative !important;
                 top: 20px !important;
@@ -74,33 +74,7 @@
                 background-size: contain !important;
             }
             
-            /* Заголовок - под картинкой */
-            #rec1674980401 .tn-elem[data-elem-id="1765792550240"] {
-                position: relative !important;
-                top: 20px !important;
-                left: auto !important;
-                width: 90% !important;
-                margin: 0 auto !important;
-                text-align: center !important;
-            }
-            #rec1674980401 .tn-elem[data-elem-id="1765792550240"] .tn-atom {
-                font-size: 28px !important;
-            }
-            
-            /* Подзаголовок */
-            #rec1674980401 .tn-elem[data-elem-id="1765792828961"] {
-                position: relative !important;
-                top: 10px !important;
-                left: auto !important;
-                width: 90% !important;
-                margin: 0 auto !important;
-                text-align: center !important;
-            }
-            #rec1674980401 .tn-elem[data-elem-id="1765792828961"] .tn-atom {
-                font-size: 16px !important;
-            }
-            
-            /* Kids Protection бейдж - наезжает на картинку как в оригинале */
+            /* Kids Protection бейдж - НАЕЗЖАЕТ НА КАРТИНКУ (как в оригинале) */
             #rec1674980401 .tn-elem[data-elem-id="1765796224508000002"] {
                 position: relative !important;
                 top: -60px !important;
@@ -123,31 +97,57 @@
                 font-size: 12px !important;
             }
             
+            /* Заголовок - под бейджем */
+            #rec1674980401 .tn-elem[data-elem-id="1765792550240"] {
+                position: relative !important;
+                top: -40px !important;
+                left: auto !important;
+                width: 90% !important;
+                margin: 0 auto !important;
+                text-align: center !important;
+            }
+            #rec1674980401 .tn-elem[data-elem-id="1765792550240"] .tn-atom {
+                font-size: 28px !important;
+            }
+            
+            /* Подзаголовок */
+            #rec1674980401 .tn-elem[data-elem-id="1765792828961"] {
+                position: relative !important;
+                top: -50px !important;
+                left: auto !important;
+                width: 90% !important;
+                margin: 0 auto !important;
+                text-align: center !important;
+            }
+            #rec1674980401 .tn-elem[data-elem-id="1765792828961"] .tn-atom {
+                font-size: 16px !important;
+            }
+            
             /* Кнопка */
             #rec1674980401 .tn-elem[data-elem-id="1765796610536"] {
                 position: relative !important;
-                top: -60px !important;
+                top: -50px !important;
                 left: auto !important;
                 width: 200px !important;
                 margin: 0 auto !important;
             }
             
-            /* ТЕЛЕФОНЫ - в ОДИН ряд как в оригинале */
+            /* ТЕЛЕФОНЫ - в ОДИН ряд БЕЗ скролла */
             .t156__wrapper {
                 display: flex !important;
-                flex-wrap: nowrap !important;
+                flex-wrap: wrap !important;
                 justify-content: center !important;
-                gap: 5px !important;
-                overflow-x: auto !important;
+                gap: 10px !important;
+                overflow: visible !important;
             }
             .t156__item {
                 flex: 0 0 auto !important;
-                width: 18% !important;
+                width: 22% !important;
                 min-width: 70px !important;
                 max-width: 120px !important;
             }
             
-            /* Преимущества - в 1 колонку как в оригинале на телефоне */
+            /* Преимущества - в 1 колонку */
             .t490__container {
                 flex-direction: column !important;
                 align-items: center !important;
@@ -192,7 +192,8 @@
         @media screen and (max-width: 480px) {
             .t156__item {
                 width: 22% !important;
-                min-width: 60px !important;
+                min-width: 55px !important;
+                max-width: 90px !important;
             }
             #rec1674980401 .tn-elem[data-elem-id="1765792345353"] {
                 width: 250px !important;
@@ -209,24 +210,30 @@
             font-size: 14px;
             line-height: 1.5;
         }
+        
+        /* КНОПКА ВВЕРХ - БЕЗ СИНЕГО КРУГА, КАК В ОРИГИНАЛЕ */
         .t452_scrolltop {
             color: #ffffff !important;
-            background: #63b4ff;
-            padding: 10px 20px;
-            border-radius: 30px;
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            text-decoration: none;
-            font-weight: 600;
-            transition: 0.2s;
+            background: none !important;
+            padding: 0 !important;
+            border-radius: 0 !important;
+            display: inline-flex !important;
+            align-items: center !important;
+            gap: 5px !important;
+            text-decoration: none !important;
+            font-weight: 400 !important;
+            transition: 0.2s !important;
+            font-size: 14px !important;
         }
         .t452_scrolltop:hover {
-            background: #4a9ee0;
-            transform: translateY(-2px);
+            text-decoration: underline !important;
+            background: none !important;
+            transform: none !important;
         }
         .t452_scrolltop svg {
-            fill: white;
+            fill: white !important;
+            width: 14px !important;
+            height: 14px !important;
         }
     </style>
 </head>
@@ -273,12 +280,12 @@
         <script>t_onReady(function() {t_onFuncLoad('t396_init',function() {t396_init('1674980401');});});</script>
     </div>
 
-    <!-- REC 1694346671 - 4 телефона в порядке 4,3,2,1 (В ОДИН РЯД) -->
+    <!-- REC 1694346671 - 4 телефона в ОДИН РЯД (порядок 4,3,2,1) -->
     <div id="rec1694346671" class="r t-rec t-rec_pt_30 t-rec_pb_90" style="padding-top:30px;padding-bottom:90px; " data-record-type="170">
         <div class="t156">
             <div class="t-container">
                 <div class="t-col t-col_12">
-                    <div class="t156__wrapper" style="display:flex; justify-content:center; gap:20px; flex-wrap:wrap;">
+                    <div class="t156__wrapper" style="display:flex; justify-content:center; gap:20px; flex-wrap:wrap; overflow:visible;">
                         <div class="t156__item" style="flex:0 0 auto; width:auto;" itemscope itemtype="http://schema.org/ImageObject">
                             <img class="t-img" imgfield="gi_img__0" src="images/iphone-4.png.webp" data-original="images/iphone-4.png.webp" data-zoom-target="0" data-zoomable="yes" data-img-zoom-url="images/iphone-4.png.webp" style="width:100%; max-width:160px;" alt="">
                         </div>
@@ -511,11 +518,8 @@
                         </div>
                     </div>
                     <div class="t452__col" style="flex: 0 0 auto; text-align: right;">
-                        <a class="t452_scrolltop" href="javascript:void(0);" onclick="window.scrollTo({top:0,behavior:'smooth'});" style="color: #ffffff !important; background: #63b4ff; padding: 10px 24px; border-radius: 40px; display: inline-flex; align-items: center; gap: 8px; text-decoration: none; font-weight: 600; transition: 0.2s;">
-                            Вверх
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="fill: white;">
-                                <path d="M12 4L12 20M12 4L18 10M12 4L6 10" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
+                        <a class="t452_scrolltop" href="javascript:void(0);" onclick="window.scrollTo({top:0,behavior:'smooth'});" style="color: #ffffff !important; background: none !important; padding: 0 !important; border-radius: 0 !important; display: inline-flex !important; align-items: center !important; gap: 5px !important; text-decoration: none !important; font-weight: 400 !important; font-size: 14px !important;">
+                            Вверх ↑
                         </a>
                     </div>
                 </div>
